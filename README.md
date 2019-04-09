@@ -1,12 +1,14 @@
 # WeatherNET- eine interaktive Wetterapp:
+
     Projekt der LVA Multimediasysteme im SS2019 @JKULinz
     Team:
     - Reisinger Philipp (k11802930)
     - Schropp Sarah (k11771533)
     - Schwap Tobias (k11773648)
 
+![](Assets/weathernet.png)
 
-### Projektbeschreibung
+### Projektbeschreibung!
 
 In herkömmlichen Wetter Apps werden meist nur punktuelle Messungen einbezogen und graphisch dargestellt, sowie Prognosen angezeigt. 
 Wir möchten dieses Konzept erweitern, in dem die bestehenden Datensätze, mit den Messungen eigener Wetterstationen ergänzen. Dazu sollen beispielsweise Raspberry Pi Einplatinenrechner mit den nötigen Sensoren versehen werden, um dann die Logs in unsere unsere Datenbank zu speichern. So soll ein Prototyp für ein Netzwerk entstehen, das an möglichst vielen Orten gleichzeitig Wetter und Umweltdaten sammelt, diese mit den bestehenden Wetterdaten vergleicht und ergänzt.
@@ -23,3 +25,12 @@ Hauptaugenmerk soll jedoch auf die Entwicklung der App und User Experience geleg
 ### Realisierung
 Geplante Realisierung der App als HTML5 Webapp mittels Angular bzw. IONIC Framework in Type-, bzw. Javascript, HTML und CSS. Durch Frameworks wie Apache Cordova kann die App so auch auf Android- und iOS Geräte heruntergeladen werden. Als Backend soll je nach Möglichkeit ein Spring- oder Firebase Server betrieben werden.
 Für die Wetterstation wird ein Raspberry Pi Zero verwendet, das in einem 3D-gedrucktem Case mit diversen Sensoren Daten wie Temperatur, Luftfeuchtigkeit, Luftdruck und Sonneneinstrahlung misst und das Netzwerk speist. 
+
+###  Links:
+
+- [Wiki](/WeatherNet/wiki)
+
+- [Demo](https://projects.tobias-schwap.at/weatherNet)
+
+  
+
