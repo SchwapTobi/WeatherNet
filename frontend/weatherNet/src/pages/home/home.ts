@@ -3,6 +3,7 @@ import {NavController} from 'ionic-angular';
 // @ts-ignore
 import * as datag from '../../assets/allcities.json';
 import {Location} from "../../model/position/location";
+import {MorePage} from "../more/more";
 
 
 @Component({
@@ -14,7 +15,7 @@ export class HomePage {
 
 
   constructor(public navCtrl: NavController) {
-    this.process();
+    //this.process();
 
   }
 
@@ -30,5 +31,10 @@ export class HomePage {
     }
 
     console.log(allObjects);
+  }
+
+  //show App-infos
+  presentPopover() {
+    this.navCtrl.push(MorePage);
   }
 }
