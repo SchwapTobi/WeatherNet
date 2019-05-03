@@ -1,3 +1,5 @@
+import {CONSTANTS} from "../../app/appConstants";
+
 export class Location {
   getJSON = function (url, callback) {
     var xhr = new XMLHttpRequest();
@@ -28,7 +30,10 @@ export class Location {
   }
 
   setPositions() {
-    let url = 'https://geocode.xyz/' + this.zip + '+' + this.city + '?region=AT;json=1'; //TODO: ADD AUTH KEY
+    let key = CONSTANTS.GEOCODEXYZ_KEY;
+
+    let url = 'https://geocode.xyz/' + this.zip + '+' + this.city + '?region=AT;json=1&auth=' + key;
+
     var _this = this;
     return this.getJSON(url, function (err, data) {
       if (err !== null) {
@@ -125,7 +130,6 @@ export class Location {
       a.dispatchEvent(e);
     }
   }
-
 
 
 }

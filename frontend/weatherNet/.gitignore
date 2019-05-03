@@ -28,6 +28,8 @@ plugins/
 plugins/android.json
 plugins/ios.json
 www/
+src/app/appConstants.ts
+*appConstants.ts
 $RECYCLE.BIN/
 
 .DS_Store
