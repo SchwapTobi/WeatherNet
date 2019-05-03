@@ -15,6 +15,7 @@ export class HomePage {
 
 
   constructor(public navCtrl: NavController) {
+    //TODO: get all geolocations
     //this.process();
 
   }
@@ -36,5 +37,10 @@ export class HomePage {
   //show App-infos
   presentPopover() {
     this.navCtrl.push(MorePage);
+  }
+
+  //return matching background video
+  getVideoByWeatherCondition(){
+    //TODO: implement
   }
 }
