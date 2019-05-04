@@ -79,7 +79,7 @@ export class Location {
           for (let item of data.data) {
             if (item.plz == plz) {
               _this.state = _this.getStateName(item.bundesland);
-              // _this.saveTextAsFile(JSON.stringify(_this));
+              // _this.exportJson(JSON.stringify(_this));
               console.log(_this);
               return;
             }
