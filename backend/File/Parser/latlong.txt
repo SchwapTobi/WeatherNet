@@ -1,4 +1,4 @@
-Plz;Ort;Longitude;Latitude
+Plz;Ort;Latitude;Longitude
 9913;"Abfaltersbach";46.7603;12.5419
 6067;"Absam";47.3;11.5
 3462;"Absdorf";48.3167;15.6167
@@ -14,7 +14,7 @@ Plz;Ort;Longitude;Latitude
 3642;"Aggsbach Dorf";48.2833;15.4167
 3641;"Aggsbach Markt";48.2833;15.4
 8943;"Aigen im Ennstal";47.5167;14.1333
-4160;"Aigen im Mühlkreis";48.6333;13.9667
+4160;"Aigen im Mï¿½hlkreis";48.6333;13.9667
 9951;"Ainet";46.8661;12.7014
 4676;"Aistersheim";48.1833;13.75
 4211;"Alberndorf in der Riedmark";48.4;14.4167
@@ -24,7 +24,7 @@ Plz;Ort;Longitude;Latitude
 2534;"Alland";48.05;16.0833
 3804;"Allentsteig";48.6833;15.3167
 8412;"Allerheiligen bei Wildon";46.9142;15.5544
-8643;"Allerheiligen im Mürztal";47.4667;15.4
+8643;"Allerheiligen im Mï¿½rztal";47.4667;15.4
 4511;"Allhaming";48.15;14.1667
 6236;"Alpbach";47.3833;11.9333
 8671;"Alpl";46.9931;14.4447
@@ -34,10 +34,10 @@ Plz;Ort;Longitude;Latitude
 4121;"Altenfelden";48.4833;13.9667
 4674;"Altenhof am Hausruck";48.1333;13.6833
 5541;"Altenmarkt im Pongau";47.3833;13.4167
-3474;"Altenwörth";48.3833;15.85
+3474;"Altenwï¿½rth";48.3833;15.85
 3033;"Altlengbach";48.15;15.9167
 2144;"Altlichtenwarth";48.6333;16.8
-4813;"Altmünster";47.9;13.75
+4813;"Altmï¿½nster";47.9;13.75
 4721;"Altschwendt";48.3333;13.6833
 2141;"Ameis";48.6667;16.5333
 7163;"Andau";47.7667;17.0333
@@ -69,8 +69,8 @@ Plz;Ort;Longitude;Latitude
 4800;"Attnang-Puchheim";48.0083;13.7167
 3452;"Atzenbrugg";48.2833;15.9
 2214;"Auersthal";48.3667;16.6333
-4971;"Aurolzmünster";48.25;13.45
-9931;"Außervillgraten";46.7875;12.4314
+4971;"Aurolzmï¿½nster";48.25;13.45
+9931;"Auï¿½ervillgraten";46.7875;12.4314
 6094;"Axams";47.2333;11.3
 4672;"Bachmanning";48.1167;13.8
 8990;"Bad Aussee";47.6;13.7833
@@ -88,12 +88,12 @@ Plz;Ort;Longitude;Latitude
 2222;"Bad Pirawarth";48.4519;16.5983
 8490;"Bad Radkersburg";46.6881;15.9881
 4701;"Bad Schallerbach";48.2333;13.9167
-2853;"Bad Schönau";47.4833;16.2333
+2853;"Bad Schï¿½nau";47.4833;16.2333
 7431;"Bad Tatzmannsdorf";47.3333;16.2167
-2540;"Bad Vöslau";47.9667;16.2
+2540;"Bad Vï¿½slau";47.9667;16.2
 4654;"Bad Wimsbach-Neydharting";48.0667;13.9
 9805;"Baldramsdorf";46.8011;13.4533
-8572;"Bärnbach";46.9833;16.05
+8572;"Bï¿½rnbach";46.9833;16.05
 4342;"Baumgartenberg";48.2;14.7333
 6121;"Baumkirchen";47.3;11.5667
 4441;"Behamberg";48.0167;14.4833
@@ -116,9 +116,9 @@ Plz;Ort;Longitude;Latitude
 6700;"Bludenz";47.1497;9.81667
 6719;"Bludesch";47.2;9.73306
 8283;"Blumau in Steiermark";47.1167;16.05
-2213;"Bockfließ";48.36;16.6039
-5645;"Böckstein";46.8556;12.5289
-3071;"Böheimkirchen";48.2;15.7667
+2213;"Bockflieï¿½";48.36;16.6039
+5645;"Bï¿½ckstein";46.8556;12.5289
+3071;"Bï¿½heimkirchen";48.2;15.7667
 5733;"Bramberg am Wildkogel";47.2723;12.3387
 6234;"Brandenberg";47.4833;11.8833
 5280;"Braunau am Inn";48.2667;13.0333
@@ -131,27 +131,27 @@ Plz;Ort;Longitude;Latitude
 8313;"Breitenfeld an der Rittschein";47.0333;15.95
 2384;"Breitenfurt bei Wien";48.1333;16.1167
 2385;"Breitenfurt bei Wien";48.1333;16.1167
-4691;"Breitenschützing";48.0833;13.7833
+4691;"Breitenschï¿½tzing";48.0833;13.7833
 2673;"Breitenstein am Semmering";47.6667;15.8167
 2014;"Breitenwaida";48.5;16.0667
 6364;"Brixen im Thale";47.45;12.25
 6230;"Brixlegg";47.4167;11.8833
-5671;"Bruck an der Großglocknerstraße";47.2833;12.8167
+5671;"Bruck an der Groï¿½glocknerstraï¿½e";47.2833;12.8167
 8251;"Bruck an der Lafnitz";47.45;15.9167
 2460;"Bruck an der Leitha";48.0167;16.7667
 8600;"Bruck an der Mur";47.4167;15.2833
 8601;"Bruck an der Mur";47.4167;15.2833
-9371;"Brückl";46.7517;14.5367
+9371;"Brï¿½ckl";46.7517;14.5367
 2345;"Brunn am Gebirge";48.1;16.2833
 3595;"Brunn an der Wild";48.6833;15.5167
 8274;"Buch bei Hartberg";47.2333;16
 4611;"Buchkirchen";48.2333;14.0167
 8291;"Burgau";47.1333;16.0833
-5111;"Bürmoos";47.9833;12.9333
-6706;"Bürs";47.1497;9.8
+5111;"Bï¿½rmoos";47.9833;12.9333
+6706;"Bï¿½rs";47.1497;9.8
 4411;"Christkindl";48.0333;14.3833
 6752;"Dalaas";47.1167;9.98333
-6884;"Damüls";47.2833;9.88333
+6884;"Damï¿½ls";47.2833;9.88333
 8241;"Dechantskirchen";47.4167;16.0167
 9772;"Dellach im Drautal";46.7375;13.0783
 4693;"Desselbrunn";48.0167;13.7667
@@ -161,15 +161,15 @@ Plz;Ort;Longitude;Latitude
 8121;"Deutschfeistritz";47.1833;15.3333
 7301;"Deutschkreutz";47.6;16.6333
 8530;"Deutschlandsberg";46.8153;15.2222
-5652;"Dienten am Hochkönig";47.3667;13
+5652;"Dienten am Hochkï¿½nig";47.3667;13
 3813;"Dietmanns";48.4667;15.15
 9103;"Diex";46.75;14.6
 4371;"Dimbach";48.3;14.8833
 2181;"Dobermannsdorf";48.6;16.8167
 3843;"Dobersberg";46.9231;14.3981
 8143;"Dobl";46.95;15.3667
-9873;"Döbriach";46.7833;13.6603
-9991;"Dölsach";46.8283;12.8453
+9873;"Dï¿½briach";46.7833;13.6603
+9991;"Dï¿½lsach";46.8283;12.8453
 8953;"Donnersbach";47.4614;14.1297
 7082;"Donnerskirchen";47.9;16.6333
 6933;"Doren";47.4928;9.87972
@@ -178,8 +178,8 @@ Plz;Ort;Longitude;Latitude
 4392;"Dorfstetten";48.3167;14.9667
 6850;"Dornbirn";47.4167;9.73306
 2165;"Drasenhofen";48.75;16.65
-2265;"Drösing";48.5333;16.9
-2263;"Dürnkrut";48.4833;16.85
+2265;"Drï¿½sing";48.5333;16.9
+2263;"Dï¿½rnkrut";48.4833;16.85
 6341;"Ebbs";47.6333;12.2167
 5531;"Eben im Pongau";47.4;13.4
 5323;"Ebenau";47.8;13.1833
@@ -245,7 +245,7 @@ Plz;Ort;Longitude;Latitude
 4101;"Feldkirchen an der Donau";48.35;14.05
 8073;"Feldkirchen bei Graz";47.0167;15.45
 5143;"Feldkirchen bei Mattighofen";48.0667;13.05
-9560;"Feldkirchen in Kärnten";46.7167;14.1
+9560;"Feldkirchen in Kï¿½rnten";46.7167;14.1
 2603;"Felixdorf";47.8833;16.2333
 3481;"Fels am Wagram";48.4333;15.8167
 9170;"Ferlach";46.5269;14.3019
@@ -270,10 +270,10 @@ Plz;Ort;Longitude;Latitude
 5131;"Franking";48.05;12.9167
 3594;"Franzen";48.6167;15.3833
 6820;"Frastanz";47.2167;9.63306
-2132;"Frättingsdorf";48.6333;16.5167
+2132;"Frï¿½ttingsdorf";48.6333;16.5167
 7132;"Frauenkirchen";47.8333;16.9167
 3183;"Freiland";46.8333;15.1333
-8694;"Frein an der Mürz";47.75;15.4833
+8694;"Frein an der Mï¿½rz";47.75;15.4833
 9712;"Fresach";46.7156;13.6908
 8441;"Fresing";46.7586;15.4475
 8240;"Friedberg";47.4333;16.05
@@ -282,26 +282,26 @@ Plz;Ort;Longitude;Latitude
 6122;"Fritzens";47.3;11.5833
 8130;"Frohnleiten";47.2667;15.3167
 8841;"Frojach";47.1308;14.3086
-6263;"Fügen";47.35;11.85
+6263;"Fï¿½gen";47.35;11.85
 6166;"Fulpmes";47.1667;11.35
-9586;"Fürnitz";46.5569;13.8211
-8280;"Fürstenfeld";47.05;16.0833
+9586;"Fï¿½rnitz";46.5569;13.8211
+8280;"Fï¿½rstenfeld";47.05;16.0833
 5330;"Fuschl am See";47.8;13.3
-6972;"Fußach";47.4831;9.66667
+6972;"Fuï¿½ach";47.4831;9.66667
 3003;"Gablitz";48.2167;16.15
 3334;"Gaflenz";47.8833;14.7167
 2541;"Gainfarn";47.95;16.2
-6974;"Gaißau";47.4667;9.6
+6974;"Gaiï¿½au";47.4667;9.6
 9132;"Gallizien";46.55;14.5167
 4210;"Gallneukirchen";48.35;14.4167
 4713;"Gallspach";48.2;13.8167
-6563;"Galtür";46.9667;10.1833
+6563;"Galtï¿½r";46.9667;10.1833
 3292;"Gaming";46.8167;14.4167
 8462;"Gamlitz";46.7203;15.5533
 4851;"Gampern";47.9833;13.55
 8922;"Gams bei Hieflau";47.6667;14.7833
 3122;"Gansbach";48.3;15.4667
-2230;"Gänserndorf";48.35;16.7333
+2230;"Gï¿½nserndorf";48.35;16.7333
 6787;"Gargellen";46.9667;9.93333
 3571;"Gars am Kamp";48.5833;15.65
 4451;"Garsten";47.7167;14.3333
@@ -318,45 +318,45 @@ Plz;Ort;Longitude;Latitude
 8153;"Geistthal";47.1667;15.1667
 2093;"Geras";48.7833;15.6667
 2201;"Gerasdorf bei Wien";48.2831;16.4667
-7542;"Gerersdorf bei Güssing";47.0667;16.25
+7542;"Gerersdorf bei Gï¿½ssing";47.0667;16.25
 5132;"Geretsberg";48.0833;12.9333
 6281;"Gerlos";47.2167;12
-3542;"Gföhl";48.5167;15.4833
+3542;"Gfï¿½hl";48.5167;15.4833
 5133;"Gilgenberg am Weilhart";48.1333;12.9333
 6295;"Ginzling";47.1;11.8
 9555;"Glanegg";46.7136;14.2064
 3704;"Glaubendorf";48.5;15.9333
-8443;"Gleinstätten";46.7536;15.3697
+8443;"Gleinstï¿½tten";46.7536;15.3697
 8200;"Gleisdorf";47.1;15.7167
 9142;"Globasnitz";46.5569;14.7028
-9346;"Glödnitz";46.8667;14.1167
+9346;"Glï¿½dnitz";46.8667;14.1167
 2640;"Gloggnitz";47.6667;15.9333
 4810;"Gmunden";47.85;13.95
 4819;"Gmunden";47.85;13.95
 2152;"Gnadendorf";48.6167;16.4
 8342;"Gnas";46.8731;15.8253
 9563;"Gnesau";46.7667;13.9667
-9585;"Gödersdorf";46.5717;13.8517
-6811;"Göfis";47.2331;9.63306
-2013;"Göllersdorf";48.4833;16.1167
+9585;"Gï¿½dersdorf";46.5717;13.8517
+6811;"Gï¿½fis";47.2331;9.63306
+2013;"Gï¿½llersdorf";48.4833;16.1167
 5440;"Golling an der Salzach";47.6;13.1667
 8635;"Gollrad";47.65;15.3
-3800;"Göpfritz an der Wild";48.7167;15.4
+3800;"Gï¿½pfritz an der Wild";48.7167;15.4
 4824;"Gosau";47.5667;13.5167
 8482;"Gosdorf";46.7278;15.7925
-3345;"Göstling an der Ybbs";47.8;14.9167
-2464;"Göttlesbrunn";48.05;16.7333
-2434;"Götzendorf an der Leitha";48.0133;16.5803
-6091;"Götzens";47.2333;11.3167
-6840;"Götzis";47.3331;9.63306
+3345;"Gï¿½stling an der Ybbs";47.8;14.9167
+2464;"Gï¿½ttlesbrunn";48.05;16.7333
+2434;"Gï¿½tzendorf an der Leitha";48.0133;16.5803
+6091;"Gï¿½tzens";47.2333;11.3167
+6840;"Gï¿½tzis";47.3331;9.63306
 9362;"Grades";46.9667;14.25
 8232;"Grafendorf bei Hartberg";47.35;16
 9131;"Grafenstein";46.6;14.4667
-3484;"Grafenwörth";48.4;15.7833
+3484;"Grafenwï¿½rth";48.4;15.7833
 3524;"Grainbrunn";48.4833;15.2667
 4201;"Gramastetten";48.3833;14.2167
 2440;"Gramatneusiedl";48.0167;16.4833
-6673;"Grän";47.5;10.55
+6673;"Grï¿½n";47.5;10.55
 8101;"Gratkorn";47.1333;15.35
 8112;"Gratwein";47.1167;15.3167
 8010;"Graz";47.0667;15.45
@@ -388,39 +388,39 @@ Plz;Ort;Longitude;Latitude
 9112;"Griffen";46.7044;14.7328
 2840;"Grimmenstein";47.6167;16.1333
 6591;"Grins";47.15;10.5167
-8962;"Gröbming";47.4333;13.9
-5082;"Grödig";47.7333;13.0333
-2301;"Groß-Enzersdorf";48.2028;16.5508
-2034;"Großharras";48.6639;16.2456
-8452;"Großklein";46.7361;15.4444
-2143;"Großkrut";48.6439;16.7236
-8734;"Großlobming";47.1833;14.8
-3711;"Großmeiseldorf";48.5306;15.8794
-2002;"Großmugl";48.4992;16.2306
-3471;"Großriedenthal";48.4833;15.8667
-2114;"Großrußbach";48.4667;16.4167
-3701;"Großweikersdorf";48.4667;15.9833
-4645;"Grünau im Almtal";47.85;13.95
-2733;"Grünbach am Schneeberg";47.7833;15.9833
+8962;"Grï¿½bming";47.4333;13.9
+5082;"Grï¿½dig";47.7333;13.0333
+2301;"Groï¿½-Enzersdorf";48.2028;16.5508
+2034;"Groï¿½harras";48.6639;16.2456
+8452;"Groï¿½klein";46.7361;15.4444
+2143;"Groï¿½krut";48.6439;16.7236
+8734;"Groï¿½lobming";47.1833;14.8
+3711;"Groï¿½meiseldorf";48.5306;15.8794
+2002;"Groï¿½mugl";48.4992;16.2306
+3471;"Groï¿½riedenthal";48.4833;15.8667
+2114;"Groï¿½ruï¿½bach";48.4667;16.4167
+3701;"Groï¿½weikersdorf";48.4667;15.9833
+4645;"Grï¿½nau im Almtal";47.85;13.95
+2733;"Grï¿½nbach am Schneeberg";47.7833;15.9833
 8993;"Grundlsee";47.6167;13.8167
 8913;"Gstatterboden";47.6;14.6333
 9722;"Gummern";46.6567;13.78
 2352;"Gumpoldskirchen";48.05;16.2833
-2525;"Günselsdorf";47.9333;16.2667
+2525;"Gï¿½nselsdorf";47.9333;16.2667
 4623;"Gunskirchen";48.1333;13.95
 2042;"Guntersdorf";48.65;16.05
 2353;"Guntramsdorf";48.0333;16.3
 2354;"Guntramsdorf";48.0333;16.3
 9342;"Gurk";46.6064;14.5236
 4942;"Gurten";48.25;13.3333
-7540;"Güssing";47.0667;16.3333
+7540;"Gï¿½ssing";47.0667;16.3333
 4293;"Gutau";48.4;14.6
 9334;"Guttaring";46.8833;14.5
 4680;"Haag am Hausruck";48.1833;13.6333
 3493;"Hadersdorf am Kamp";48.45;15.7167
 2061;"Hadres";48.7;16.1167
-4232;"Hagenberg im Mühlkreis";48.3667;14.5167
-4785;"Haibach bei Schärding";48.5667;13.5
+4232;"Hagenberg im Mï¿½hlkreis";48.3667;14.5167
+4785;"Haibach bei Schï¿½rding";48.5667;13.5
 4083;"Haibach ob der Donau";48.4;13.9167
 4431;"Haidershofen";48.0667;14.45
 9111;"Haimburg";46.695;14.6725
@@ -440,14 +440,14 @@ Plz;Ort;Longitude;Latitude
 4483;"Hargelsberg";48.15;14.4167
 2286;"Haringsee";48.1833;16.7833
 8230;"Hartberg";47.2849;15.9745
-6651;"Häselgehr";47.3167;10.5
-4170;"Haslach an der Mühl";48.5833;14.0333
+6651;"Hï¿½selgehr";47.3167;10.5
+4170;"Haslach an der Mï¿½hl";48.5833;14.0333
 8361;"Hatzendorf";46.9811;15.9956
 2054;"Haugsdorf";48.7;16.0667
 2145;"Hausbrunn";48.6167;16.8167
 2184;"Hauskirchen";48.6;16.7667
 3464;"Hausleiten";48.0667;14.4333
-8071;"Hausmannstätten";46.9911;15.5114
+8071;"Hausmannstï¿½tten";46.9911;15.5114
 3860;"Heidenreichstein";48.8667;15.1167
 8172;"Heilbrunn";47.3333;15.6167
 9844;"Heiligenblut";47.0333;12.8333
@@ -456,7 +456,7 @@ Plz;Ort;Longitude;Latitude
 8451;"Heimschuh";46.75;15.4833
 6611;"Heiterwang";47.45;10.75
 4184;"Helfenberg";48.5333;14.1333
-4202;"Hellmonsödt";48.4333;14.3
+4202;"Hellmonsï¿½dt";48.4333;14.3
 8411;"Hengsberg";46.8667;15.4333
 5302;"Henndorf am Wallersee";47.9;13.1833
 9620;"Hermagor";46.6272;13.3672
@@ -465,35 +465,35 @@ Plz;Ort;Longitude;Latitude
 4175;"Herzogsdorf";48.4333;14.1167
 8920;"Hieflau";47.6;14.7333
 9562;"Himmelberg";46.7567;14.0306
-2371;"Hinterbrühl";48.0833;16.2333
+2371;"Hinterbrï¿½hl";48.0833;16.2333
 5754;"Hinterglemm";47.3667;12.5667
 3413;"Hintersdorf";48.3;16.2167
 4573;"Hinterstoder";47.6833;14.15
 6294;"Hintertux";47.1167;11.6833
 6283;"Hippach";47.2;11.8667
 8221;"Hirnsdorf";47.1833;15.8167
-4242;"Hirschbach im Mühlkreis";48.4833;14.4167
+4242;"Hirschbach im Mï¿½hlkreis";48.4833;14.4167
 8584;"Hirschegg";47.0167;14.9167
 2552;"Hirtenberg";47.9167;16.1833
 6952;"Hittisau";47.45;9.95
 8151;"Hitzendorf";47.0333;15.3
 6395;"Hochfilzen";47.4667;12.6167
 2852;"Hochneukirchen";47.45;16.2
-6452;"Hochsölden";46.9833;10.9667
+6452;"Hochsï¿½lden";46.9833;10.9667
 2802;"Hochwolkersdorf";47.65;16.2833
 2451;"Hof am Leithagebirge";47.95;16.5833
 5322;"Hof bei Salzburg";47.8167;13.2167
 4716;"Hofkirchen an der Trattnach";48.2167;13.7333
-4142;"Hofkirchen im Mühlkreis";48.4833;13.8
+4142;"Hofkirchen im Mï¿½hlkreis";48.4833;13.8
 4492;"Hofkirchen im Traunkreis";48.1333;14.3667
-3421;"Höflein an der Donau";48.35;16.2667
+3421;"Hï¿½flein an der Donau";48.35;16.2667
 2273;"Hohenau an der March";48.6;16.9
 6845;"Hohenems";47.3667;9.68306
 2223;"Hohenruppersdorf";48.45;16.65
 8785;"Hohentauern";47.4333;14.4833
 6914;"Hohenweiler";47.5833;9.78333
 4921;"Hohenzell";48.1833;13.5333
-5251;"Höhnhart";48.1667;13.2667
+5251;"Hï¿½hnhart";48.1667;13.2667
 2020;"Hollabrunn";47.6167;16.0833
 3343;"Hollenstein an der Ybbs";47.8;14.7667
 2812;"Hollenthon";47.5833;16.25
@@ -501,13 +501,13 @@ Plz;Ort;Longitude;Latitude
 6654;"Holzgau";47.2642;10.1989
 6361;"Hopfgarten im Brixental";47.45;12.1667
 9961;"Hopfgarten in Defereggen";46.9192;12.5364
-6912;"Hörbranz";47.55;9.75
+6912;"Hï¿½rbranz";47.55;9.75
 7312;"Horitschon";47.5833;16.55
-4063;"Hörsching";48.2333;14.1833
-3383;"Hürm";48.15;15.4
-5511;"Hüttau";47.4167;13.3
-9375;"Hüttenberg";46.9414;14.55
-5612;"Hüttschlag";47.1667;13.2333
+4063;"Hï¿½rsching";48.2333;14.1833
+3383;"Hï¿½rm";48.15;15.4
+5511;"Hï¿½ttau";47.4167;13.3
+9375;"Hï¿½ttenberg";46.9414;14.55
+5612;"Hï¿½ttschlag";47.1667;13.2333
 3544;"Idolsberg";48.5833;15.4833
 7142;"Illmitz";47.75;16.8
 8262;"Ilz";47.05;16
@@ -562,7 +562,7 @@ Plz;Ort;Longitude;Latitude
 3973;"Karlstift";48.5833;14.75
 2113;"Karnabrunn";48.45;16.3667
 9941;"Kartitsch";46.7289;12.5008
-3072;"Kasten bei Böheimkirchen";48.15;15.7833
+3072;"Kasten bei Bï¿½heimkirchen";48.15;15.7833
 8842;"Katsch an der Mur";47.1333;14.2833
 4223;"Katsdorf";47.0422;14.4756
 2572;"Kaumberg";48.0167;15.8833
@@ -595,7 +595,7 @@ Plz;Ort;Longitude;Latitude
 2860;"Kirchschlag in der Buckligen Welt";47.5;16.2833
 3241;"Kirnberg an der Mank";48.0667;15.3167
 2421;"Kittsee";48.0833;17.0667
-6370;"Kitzbühel";47.45;12.3833
+6370;"Kitzbï¿½hel";47.45;12.3833
 8442;"Kitzeck im Sausal";46.7667;15.4333
 9010;"Klagenfurt";46.6247;14.3053
 9013;"Klagenfurt";46.6247;14.3053
@@ -610,15 +610,15 @@ Plz;Ort;Longitude;Latitude
 9029;"Klagenfurt";46.6247;14.3053
 4564;"Klaus an der Pyhrnbahn";47.8167;14.15
 5603;"Kleinarl";47.2833;13.3167
-9345;"Kleinglödnitz";46.85;14.1333
+9345;"Kleinglï¿½dnitz";46.85;14.1333
 2431;"Kleinneusiedl";48.0833;16.6
-3660;"Kleinpöchlarn";48.2167;15.2167
+3660;"Kleinpï¿½chlarn";48.2167;15.2167
 4442;"Kleinraming";48;14.4833
 4464;"Kleinreifling";47.8167;14.6333
-4115;"Kleinzell im Mühlkreis";48.45;13.9833
+4115;"Kleinzell im Mï¿½hlkreis";48.45;13.9833
 7013;"Klingenbach";47.75;16.55
-8493;"Klöch";46.7647;15.9656
-6754;"Klösterle";46.7264;13.9183
+8493;"Klï¿½ch";46.7647;15.9656
+6754;"Klï¿½sterle";46.7264;13.9183
 3400;"Klosterneuburg";48.3;16.3167
 3402;"Klosterneuburg";48.3;16.3167
 3403;"Klosterneuburg";48.3;16.3167
@@ -627,29 +627,29 @@ Plz;Ort;Longitude;Latitude
 8722;"Knittelfeld";47.2167;14.8167
 7332;"Kobersdorf";47.6;16.4
 6842;"Koblach";47.3331;9.6
-8580;"Köflach";46.85;13.8667
+8580;"Kï¿½flach";46.85;13.8667
 8191;"Koglhof";47.3167;15.6833
 7512;"Kohfidisch";47.1667;16.35
 9815;"Kolbnitz";46.8667;13.3167
 4154;"Kollerschlag";48.6;13.8333
 6114;"Kolsass";47.2833;11.6333
-3433;"Königstetten";48.3;16.1333
-4280;"Königswiesen";48.4;14.8333
+3433;"Kï¿½nigstetten";48.3;16.1333
+4280;"Kï¿½nigswiesen";48.4;14.8333
 4794;"Kopfing im Innkreis";48.4333;13.65
 5321;"Koppl";47.8;13.1667
 2100;"Korneuburg";48.35;16.3333
-6345;"Kössen";47.6667;12.4
-9231;"Köstenberg";46.65;14.0167
+6345;"Kï¿½ssen";47.6667;12.4
+9231;"Kï¿½stenberg";46.65;14.0167
 3623;"Kottes";48.4167;15.3
 2542;"Kottingbrunn";47.95;16.2167
-9071;"Köttmannsdorf";46.5614;14.2339
+9071;"Kï¿½ttmannsdorf";46.5614;14.2339
 9311;"Kraig";46.8131;14.3686
 8854;"Krakaudorf";47.1667;14.0167
 6233;"Kramsach";47.45;11.8667
 8714;"Kraubath an der Mur";47.3;14.9333
 3500;"Krems an der Donau";48.4167;15.6
-9862;"Kremsbrücke";46.9472;13.6275
-4550;"Kremsmünster";48.05;14.1333
+9862;"Kremsbrï¿½cke";46.9472;13.6275
+4550;"Kremsmï¿½nster";48.05;14.1333
 4631;"Krenglbach";48.2;13.95
 7031;"Krensdorf";47.7833;16.4167
 8670;"Krieglach";47.5333;15.55
@@ -658,13 +658,13 @@ Plz;Ort;Longitude;Latitude
 4484;"Kronstorf";48.1333;14.45
 3543;"Krumau am Kamp";48.5833;15.4333
 9201;"Krumpendorf";46.6333;14.2167
-2671;"Küb";47.6833;15.8667
+2671;"Kï¿½b";47.6833;15.8667
 5431;"Kuchl";47.6167;13.15
 6330;"Kufstein";47.45;13.7667
 6332;"Kufstein";47.45;13.7667
 6333;"Kufstein";47.45;13.7667
-9125;"Kühnsdorf";46.6219;14.6364
-6183;"Kühtai";47.2167;11
+9125;"Kï¿½hnsdorf";46.6219;14.6364
+6183;"Kï¿½htai";47.2167;11
 7543;"Kukmirn";47.0667;16.2167
 8062;"Kumberg";47.15;15.5333
 6250;"Kundl";47.4667;11.9833
@@ -683,7 +683,7 @@ Plz;Ort;Longitude;Latitude
 4772;"Lambrechten";48.3167;13.5167
 5112;"Lamprechtshausen";47.9833;12.95
 6941;"Langenegg";47.4667;9.9
-6444;"Längenfeld";47.0667;10.9667
+6444;"Lï¿½ngenfeld";47.0667;10.9667
 3425;"Langenlebarn";48.3333;16.1167
 3550;"Langenlois";48.4667;15.6667
 3442;"Langenrohr";48.3;16
@@ -696,7 +696,7 @@ Plz;Ort;Longitude;Latitude
 9314;"Launsdorf";46.7706;14.4519
 4461;"Laussa";47.7167;14.6333
 6923;"Lauterach";47.4831;9.73306
-9473;"Lavamünd";46.65;14.9333
+9473;"Lavamï¿½nd";46.65;14.9333
 2361;"Laxenburg";48.0667;16.35
 8403;"Lebring";46.8522;15.5383
 6764;"Lech";47.2;10.15
@@ -704,7 +704,7 @@ Plz;Ort;Longitude;Latitude
 3652;"Leiben";48.2333;15.2667
 8430;"Leibnitz";46.7817;15.5417
 2003;"Leitzersdorf";48.4167;16.2333
-4132;"Lembach im Mühlkreis";48.4833;13.8833
+4132;"Lembach im Mï¿½hlkreis";48.4833;13.8833
 5651;"Lend";47.3;13.0667
 9811;"Lendorf";46.6578;14.2783
 8700;"Leoben";46.9406;13.6089
@@ -726,28 +726,28 @@ Plz;Ort;Longitude;Latitude
 8463;"Leutschach";46.6672;15.4689
 9556;"Liebenfels";46.7378;14.2867
 8501;"Lieboch";46.9742;15.3375
-9851;"Lieserbrücke";46.8333;13.4833
+9851;"Lieserbrï¿½cke";46.8333;13.4833
 8940;"Liezen";47.5667;14.2333
 8563;"Ligist";46.9939;15.2108
 3180;"Lilienfeld";48.0167;15.6333
 3874;"Litschau";48.9333;15.05
 7532;"Litzelsdorf";47.15;13.8
 5221;"Lochen";48.0167;13.1833
-8334;"Lödersdorf";46.9586;15.9433
+8334;"Lï¿½dersdorf";46.9586;15.9433
 5090;"Lofer";47.5833;12.6833
 5311;"Loibichl";47.8333;13.4
 3211;"Loich";47.9833;15.4
-8282;"Loipersdorf bei Fürstenfeld";47;16.1
-9335;"Lölling";46.9167;14.5833
+8282;"Loipersdorf bei Fï¿½rstenfeld";47;16.1
+9335;"Lï¿½lling";46.9167;14.5833
 4460;"Losenstein";47.9167;14.4333
 6713;"Ludesch";47.2;9.78306
 9072;"Ludmannsdorf";46.5333;14.1333
 3762;"Ludweis";48.7667;15.4833
-5523;"Lungötz";47.4833;13.4
+5523;"Lungï¿½tz";47.4833;13.4
 3293;"Lunz am See";47.85;15.05
 6890;"Lustenau";47.4331;9.65
 7361;"Lutzmannsburg";47.4667;16.6333
-6841;"Mäder";47.35;9.61667
+6841;"Mï¿½der";47.35;9.61667
 2024;"Mailberg";48.6667;16.1833
 5751;"Maishofen";47.3667;12.8
 3712;"Maissau";48.5667;15.8167
@@ -772,7 +772,7 @@ Plz;Ort;Longitude;Latitude
 5241;"Maria Schmolln";48.1333;13.2
 2642;"Maria Schutz";47.15;15.4333
 3672;"Maria Taferl";48.2167;15.15
-9082;"Maria Wörth";46.6164;14.1631
+9082;"Maria Wï¿½rth";46.6164;14.1631
 8812;"Mariahof";47.1;14.4
 5571;"Mariapfarr";47.15;13.75
 7433;"Mariasdorf";47.3667;16.2167
@@ -800,11 +800,11 @@ Plz;Ort;Longitude;Latitude
 3390;"Melk";48.2167;15.3167
 6881;"Mellau";47.35;9.88333
 3761;"Messern";48.7167;15.5167
-8092;"Mettersdorf am Saßbach";46.8058;15.7111
+8092;"Mettersdorf am Saï¿½bach";46.8058;15.7111
 4931;"Mettmach";48.1667;13.35
 5152;"Michaelbeuern";48.0167;13.0333
 4712;"Michaelnbach";48.2833;13.8167
-4563;"Micheldorf in Oberösterreich";47.8667;14.1333
+4563;"Micheldorf in Oberï¿½sterreich";47.8667;14.1333
 3451;"Michelhausen";48.2833;15.9333
 6142;"Mieders";47.1667;11.3833
 6414;"Mieming";47.3;10.9833
@@ -815,47 +815,47 @@ Plz;Ort;Longitude;Latitude
 2130;"Mistelbach an der Zaya";48.57;16.5767
 4613;"Mistelbach bei Wels";48.2333;14.0667
 3621;"Mitterarnsdorf";48.3667;15.4333
-5503;"Mitterberghütten";47.4;13.2167
-8662;"Mitterdorf im Mürztal";47.5333;15.5167
+5503;"Mitterberghï¿½tten";47.4;13.2167
+8662;"Mitterdorf im Mï¿½rztal";47.5333;15.5167
 4343;"Mitterkirchen";48.1833;14.7
 2441;"Mitterndorf an der Fischa";47.9833;16.4667
 5730;"Mittersill";47.2667;12.4833
 9102;"Mittertrixen";46.6983;14.5853
 9912;"Mittewald an der Drau";46.7667;12.6
 8131;"Mixnitz";47.3167;15.3667
-8763;"Möderbrugg";47.2761;14.4839
-2340;"Mödling";48.0667;16.3833
-2342;"Mödling";48.0667;16.3833
+8763;"Mï¿½derbrugg";47.2761;14.4839
+2340;"Mï¿½dling";48.0667;16.3833
+2342;"Mï¿½dling";48.0667;16.3833
 8382;"Mogersdorf";46.9492;16.2322
-9813;"Möllbrücke";46.8364;13.3728
-2513;"Möllersdorf";48.0167;16.3
+9813;"Mï¿½llbrï¿½cke";46.8364;13.3728
+2513;"Mï¿½llersdorf";48.0167;16.3
 4591;"Molln";47.8833;14.25
-4281;"Mönchdorf";48.35;14.8
-7123;"Mönchhof";47.8667;16.9333
+4281;"Mï¿½nchdorf";48.35;14.8
+7123;"Mï¿½nchhof";47.8667;16.9333
 5310;"Mondsee";47.8167;13.3833
-2872;"Mönichkirchen";47.5;16.0333
-8252;"Mönichwald";47.45;15.8667
-9062;"Moosburg in Kärnten";46.6575;14.1747
+2872;"Mï¿½nichkirchen";47.5;16.0333
+8252;"Mï¿½nichwald";47.45;15.8667
+9062;"Moosburg in Kï¿½rnten";46.6575;14.1747
 5141;"Moosdorf";48.05;12.9833
 8562;"Mooskirchen";46.9817;15.2789
-7072;"Mörbisch am See";47.75;16.6667
-9842;"Mörtschach";46.9239;12.9178
-6423;"Mötz";47.2833;10.95
-5505;"Mühlbach am Hochkönig";47.3777;13.1127
-3473;"Mühlbach am Manhartsberg";48.5167;15.7833
-8822;"Mühlen";47.0333;14.5
+7072;"Mï¿½rbisch am See";47.75;16.6667
+9842;"Mï¿½rtschach";46.9239;12.9178
+6423;"Mï¿½tz";47.2833;10.95
+5505;"Mï¿½hlbach am Hochkï¿½nig";47.3777;13.1127
+3473;"Mï¿½hlbach am Manhartsberg";48.5167;15.7833
+8822;"Mï¿½hlen";47.0333;14.5
 5583;"Muhr";47.1167;13.5
-7052;"Müllendorf";47.8333;16.45
-2482;"Münchendorf";48.0333;16.3833
+7052;"Mï¿½llendorf";47.8333;16.45
+2482;"Mï¿½nchendorf";48.0333;16.3833
 5222;"Munderfing";48.0667;13.1833
-3662;"Münichreith am Ostrong";48.25;15.1167
-4323;"Münzbach";48.2667;14.7
-4792;"Münzkirchen";48.4833;13.5667
+3662;"Mï¿½nichreith am Ostrong";48.25;15.1167
+4323;"Mï¿½nzbach";48.2667;14.7
+4792;"Mï¿½nzkirchen";48.4833;13.5667
 8850;"Murau";47.1;14.1667
 8480;"Mureck";46.7081;15.7747
-8644;"Mürzhofen";47.4833;15.3833
-8693;"Mürzsteg";47.6667;15.4833
-8680;"Mürzzuschlag";47.6;15.6833
+8644;"Mï¿½rzhofen";47.4833;15.3833
+8693;"Mï¿½rzsteg";47.6667;15.4833
+8680;"Mï¿½rzzuschlag";47.6;15.6833
 2723;"Muthmannsdorf";47.8333;16.1
 6162;"Mutters";47.2333;11.3833
 4331;"Naarn im Machland";48.2167;14.6
@@ -866,9 +866,9 @@ Plz;Ort;Longitude;Latitude
 6543;"Nauders";46.8833;10.5167
 7311;"Neckenmarkt";47.6;16.55
 6710;"Nenzing";47.1831;9.7
-6672;"Nesselwängle";47.4833;10.6167
+6672;"Nesselwï¿½ngle";47.4833;10.6167
 8302;"Nestelbach bei Graz";47.0667;15.6
-8692;"Neuberg an der Mürz";47.6667;15.5667
+8692;"Neuberg an der Mï¿½rz";47.6667;15.5667
 8292;"Neudau";46.8333;14.8333
 2475;"Neudorf";46.5833;14.2833
 2135;"Neudorf bei Staatz";48.7208;16.4914
@@ -877,18 +877,18 @@ Plz;Ort;Longitude;Latitude
 8385;"Neuhaus am Klausenbach";46.8667;16.0333
 4501;"Neuhofen an der Krems";48.1333;14.2167
 3364;"Neuhofen an der Ybbs";48.05;14.85
-5741;"Neukirchen am Großvenediger";47.25;12.2833
+5741;"Neukirchen am Groï¿½venediger";47.25;12.2833
 4724;"Neukirchen am Walde";48.4;13.7667
 5145;"Neukirchen an der Enknach";48.1833;13.05
-4872;"Neukirchen an der Vöckla";48.0333;13.5333
+4872;"Neukirchen an der Vï¿½ckla";48.0333;13.5333
 4671;"Neukirchen bei Lambach";48.1;13.8167
 3040;"Neulengbach";48.2;15.9
 5202;"Neumarkt am Wallersee";47.95;13.2333
 3371;"Neumarkt an der Ybbs";48.1333;15.05
 4720;"Neumarkt im Hausruckkreis";48.2667;13.7167
-4212;"Neumarkt im Mühlkreis";48.4167;14.4833
+4212;"Neumarkt im Mï¿½hlkreis";48.4167;14.4833
 8820;"Neumarkt in Steiermark";47.0708;14.4228
-3593;"Neupölla";48.6333;15.4333
+3593;"Neupï¿½lla";48.6333;15.4333
 7100;"Neusiedl am See";47.9333;16.8333
 2183;"Neusiedl an der Zaya";48.6333;16.8
 6167;"Neustift im Stubaital";47.1167;11.3167
@@ -902,28 +902,28 @@ Plz;Ort;Longitude;Latitude
 2116;"Niederleis";48.55;16.4
 4491;"Niederneukirchen";48.15;14.3333
 5722;"Niedernsill";47.2833;12.65
-3702;"Niederrußbach";48.45;16.0333
+3702;"Niederruï¿½bach";48.45;16.0333
 4692;"Niederthalheim";48.1;13.75
 4174;"Niederwaldkirchen";48.45;14.0833
-8831;"Niederwölz";47.15;14.3667
+8831;"Niederwï¿½lz";47.15;14.3667
 7302;"Nikitsch";47.5333;16.6667
 8712;"Niklasdorf";47.3833;15.15
 9782;"Nikolsdorf";46.7858;12.9133
-3691;"Nöchling";48.2167;14.9833
-9611;"Nötsch im Gailtal";46.5833;13.5833
-5151;"Nußdorf am Haunsberg";47.9594;13.0092
-6714;"Nüziders";47.1667;9.8
+3691;"Nï¿½chling";48.2167;14.9833
+9611;"Nï¿½tsch im Gailtal";46.5833;13.5833
+5151;"Nuï¿½dorf am Haunsberg";47.9594;13.0092
+6714;"Nï¿½ziders";47.1667;9.8
 8742;"Obdach";47.0667;14.6833
 5411;"Oberalm";47.7;13.1
 9781;"Oberdrauburg";46.7431;12.9703
-4593;"Obergrünburg";47.95;14.25
+4593;"Obergrï¿½nburg";47.95;14.25
 6456;"Obergurgl";46.8667;11.0167
 8455;"Oberhaag";46.6858;15.3361
 4894;"Oberhofen am Irrsee";47.95;13.3
 4144;"Oberkappel";48.55;13.7667
 7451;"Oberloisdorf";47.45;16.5
 3521;"Obermeisling";48.4667;15.45
-4131;"Obermühl";48.45;13.9167
+4131;"Obermï¿½hl";48.45;13.9167
 4982;"Obernberg am Inn";48.3167;13.3333
 3281;"Oberndorf an der Melk";48.05;15.2167
 5110;"Oberndorf bei Salzburg";47.95;12.9333
@@ -931,7 +931,7 @@ Plz;Ort;Longitude;Latitude
 6173;"Oberperfuss";47.2333;11.25
 7350;"Oberpullendorf";47.5;16.5167
 2105;"Oberrohrbach";46.9833;14.9667
-7432;"Oberschützen";47.35;16.2
+7432;"Oberschï¿½tzen";47.35;16.2
 2283;"Obersiebenbrunn";48.2667;16.7
 2224;"Obersulz";48.5;16.6667
 5562;"Obertauern";47.25;13.5333
@@ -943,10 +943,10 @@ Plz;Ort;Longitude;Latitude
 4882;"Oberwang";47.8667;13.4333
 7400;"Oberwart";47.2833;16.2
 2295;"Oberweiden";48.3;16.8167
-3124;"Oberwölbling";48.3167;15.5833
-8832;"Oberwölz";47.2;14.2667
+3124;"Oberwï¿½lbling";48.3167;15.5833
+8832;"Oberwï¿½lz";47.2;14.2667
 8762;"Oberzeiring";47.25;14.4833
-8960;"Öblarn";47.45;13.9833
+8960;"ï¿½blarn";47.45;13.9833
 3123;"Obritzberg";48.2833;15.5833
 6416;"Obsteig";47.3;10.9333
 4064;"Oftering";48.2333;14.1333
@@ -978,7 +978,7 @@ Plz;Ort;Longitude;Latitude
 6082;"Patsch";47.2;11.4167
 2650;"Payerbach";47.6833;15.85
 8120;"Peggau";47.2;15.35
-4153;"Peilstein im Mühlviertel";48.6167;13.8833
+4153;"Peilstein im Mï¿½hlviertel";48.6167;13.8833
 4624;"Pennewang";48.1333;13.85
 2380;"Perchtoldsdorf";48.1167;16.2667
 4320;"Perg";48.25;14.6333
@@ -1005,19 +1005,19 @@ Plz;Ort;Longitude;Latitude
 8212;"Pischelsdorf in Steiermark";47.1667;15.8
 2823;"Pitten";47.7167;16.1833
 3564;"Plank am Kamp";48.55;15.6667
-3380;"Pöchlarn";48.2;15.2
+3380;"Pï¿½chlarn";48.2;15.2
 7141;"Podersdorf am See";47.85;16.8333
-3650;"Pöggstall";48.3167;15.1833
+3650;"Pï¿½ggstall";48.3167;15.1833
 4951;"Polling im Innkreis";48.2333;13.2667
-8761;"Pöls";46.8833;15.4
-4891;"Pöndorf";48;13.3833
+8761;"Pï¿½ls";46.8833;15.4
+4891;"Pï¿½ndorf";48;13.3833
 3140;"Pottenbrunn";48.2333;15.7
 2486;"Pottendorf";47.9;16.3833
-7033;"Pöttsching";47.8;16.3833
+7033;"Pï¿½ttsching";47.8;16.3833
 2473;"Potzneusiedl";48.0333;16.9333
 2161;"Poysbrunn";48.7167;16.6167
 2170;"Poysdorf";48.6667;16.6333
-9974;"Prägraten";47.0167;12.3833
+9974;"Prï¿½graten";47.0167;12.3833
 4731;"Prambachkirchen";48.3167;13.9167
 4874;"Pramet";48.1333;13.4833
 9461;"Prebl";46.9167;14.8
@@ -1039,7 +1039,7 @@ Plz;Ort;Longitude;Latitude
 3214;"Puchenstuben";47.9167;15.2833
 4055;"Pucking";48.1833;14.1833
 3741;"Pulkau";48.7;15.85
-3944;"Pürbach";46.9667;13.6167
+3944;"Pï¿½rbach";46.9667;13.6167
 3002;"Purkersdorf";48.2;16.1667
 9812;"Pusarnitz";46.8333;13.4
 8764;"Pusterwald";47.3061;14.3756
@@ -1054,7 +1054,7 @@ Plz;Ort;Longitude;Latitude
 6741;"Raggal";47.2167;9.83306
 2215;"Raggendorf";48.3833;16.6667
 4791;"Rainbach im Innkreis";48.45;13.5333
-4261;"Rainbach im Mühlkreis";48.55;14.4667
+4261;"Rainbach im Mï¿½hlkreis";48.55;14.4667
 5591;"Ramingstein";47.0667;13.8333
 8972;"Ramsau am Dachstein";47.4167;13.6333
 9833;"Rangersdorf";46.8653;12.9783
@@ -1069,7 +1069,7 @@ Plz;Ort;Longitude;Latitude
 4844;"Regau";47.9833;13.6833
 2403;"Regelsbrunn";48.1;16.7667
 2651;"Reichenau an der Rax";47.7;15.8333
-4204;"Reichenau im Mühlkreis";48.45;14.35
+4204;"Reichenau im Mï¿½hlkreis";48.45;14.35
 9463;"Reichenfels";47;14.75
 4981;"Reichersberg";48.2667;16.0667
 4462;"Reichraming";47.8833;14.45
@@ -1095,14 +1095,14 @@ Plz;Ort;Longitude;Latitude
 2663;"Rohr im Gebirge";47.8833;15.7333
 4532;"Rohr im Kremstal";48.0667;14.1667
 2471;"Rohrau";48.0667;16.85
-3163;"Rohrbach an der Gölsen";48.0333;15.7333
+3163;"Rohrbach an der Gï¿½lsen";48.0333;15.7333
 8234;"Rohrbach an der Lafnitz";47.3833;16
 7222;"Rohrbach bei Mattersburg";47.7167;16.4167
-4150;"Rohrbach in Oberösterreich";48.5333;13.95
+4150;"Rohrbach in Oberï¿½sterreich";48.5333;13.95
 3495;"Rohrendorf bei Krems";48.4167;15.65
 4661;"Roitham";48.0333;13.8333
 6426;"Roppen";47.2167;10.8167
-3743;"Röschitz";48.65;15.8667
+3743;"Rï¿½schitz";48.65;15.8667
 9232;"Rosegg";46.5833;14.0333
 9183;"Rosenbach";46.5333;14.0333
 3573;"Rosenburg";48.6333;15.6333
@@ -1137,14 +1137,14 @@ Plz;Ort;Longitude;Latitude
 6822;"Satteins";47.2167;9.66667
 9520;"Sattendorf";46.6686;13.905
 4642;"Sattledt";48.0667;14.05
-3374;"Säusenstein";48.2;15.1167
+3374;"Sï¿½usenstein";48.2;15.1167
 6432;"Sautens";47.2;10.8667
 4351;"Saxen";48.2;14.7833
 7472;"Schachendorf";47.2667;16.4333
-8244;"Schäffern";47.4667;16.1
+8244;"Schï¿½ffern";47.4667;16.1
 4784;"Schardenberg";48.5333;13.5
-4780;"Schärding";48.45;13.4333
-4782;"Schärding";48.45;13.4333
+4780;"Schï¿½rding";48.45;13.4333
+4782;"Schï¿½rding";48.45;13.4333
 6108;"Scharnitz";47.3833;11.2833
 4644;"Scharnstein";47.9;13.95
 4612;"Scharten";47.4333;13.3
@@ -1162,17 +1162,17 @@ Plz;Ort;Longitude;Latitude
 6262;"Schlitters";47.3667;11.8333
 5212;"Schneegattern";48.0167;13.3
 6882;"Schnepfau";47.35;9.95
-8844;"Schöder";47.1833;14.1
-4274;"Schönau im Mühlkreis";48.3833;14.7333
-6141;"Schönberg im Stubaital";47.1833;11.4167
-3392;"Schönbühel an der Donau";48.25;15.3667
-6491;"Schönwies";47.1833;10.65
+8844;"Schï¿½der";47.1833;14.1
+4274;"Schï¿½nau im Mï¿½hlkreis";48.3833;14.7333
+6141;"Schï¿½nberg im Stubaital";47.1833;11.4167
+3392;"Schï¿½nbï¿½hel an der Donau";48.25;15.3667
+6491;"Schï¿½nwies";47.1833;10.65
 6886;"Schoppernau";47.3133;10.0175
 2641;"Schottwien";47.65;15.8667
 2073;"Schrattenthal";48.7;15.9
-6888;"Schröcken";47.25;10.0833
+6888;"Schrï¿½cken";47.25;10.0833
 6780;"Schruns";47.0667;9.91667
-7081;"Schützen am Gebirge";47.85;16.6167
+7081;"Schï¿½tzen am Gebirge";47.85;16.6167
 8541;"Schwanberg";46.7583;15.2083
 5134;"Schwand im Innkreis";48.1833;12.9667
 4690;"Schwanenstadt";48.05;13.7667
@@ -1212,9 +1212,9 @@ Plz;Ort;Longitude;Latitude
 6073;"Sistrans";47.2333;11.45
 3714;"Sitzendorf an der Schmida";48.5833;15.9333
 8554;"Soboth";46.6814;15.0783
-8362;"Söchau";47.0333;16.0167
-6450;"Sölden";46.9667;11
-6306;"Söll";47.5;12.1833
+8362;"Sï¿½chau";47.0333;16.0167
+6450;"Sï¿½lden";46.9667;11
+6306;"Sï¿½ll";47.5;12.1833
 2601;"Sollenau";47.8833;16.25
 2453;"Sommerein";47.9833;16.65
 9629;"Sonnleiten";46.7539;14.0261
@@ -1235,12 +1235,12 @@ Plz;Ort;Longitude;Latitude
 8510;"Stainz";46.8244;15.8922
 8152;"Stallhofen";46.6356;13.9772
 6422;"Stams";47.2667;10.9833
-8653;"Stanz im Mürztal";47.4667;15.5
+8653;"Stanz im Mï¿½rztal";47.4667;15.5
 6642;"Stanzach";47.3833;10.5667
 3125;"Statzendorf";48.3;15.6333
 7551;"Stegersbach";47.1667;16.1667
 8961;"Stein an der Enns";47.4333;13.9333
-2751;"Steinabrückl";47.8667;16.2
+2751;"Steinabrï¿½ckl";47.8667;16.2
 6150;"Steinach am Brenner";47.0833;11.4667
 3261;"Steinakirchen am Forst";48.0667;15.0333
 4853;"Steinbach am Attersee";47.8167;13.55
@@ -1254,7 +1254,7 @@ Plz;Ort;Longitude;Latitude
 4404;"Steyr";48.0333;14.4167
 4406;"Steyr";48.0333;14.4167
 4221;"Steyregg";48.2833;14.3667
-4662;"Steyrermühl";47.9833;13.8
+4662;"Steyrermï¿½hl";47.9833;13.8
 4571;"Steyrling";47.8;14.1167
 2262;"Stillfried";48.4;16.8333
 7552;"Stinatz";47.2;16.1167
@@ -1264,12 +1264,12 @@ Plz;Ort;Longitude;Latitude
 3744;"Stockern";47.3;12.8833
 8852;"Stolzalpe";47.1214;14.1992
 7344;"Stoob";47.5167;16.4667
-3073;"Stössing";48.1167;15.8
+3073;"Stï¿½ssing";48.1167;15.8
 8345;"Straden";46.8092;15.8681
 8192;"Strallegg";47.4;15.7167
 3722;"Straning";48.6;15.85
 6261;"Strass im Zillertal";47.3833;11.8167
-8472;"Straß in Steiermark";46.7272;15.6244
+8472;"Straï¿½ in Steiermark";46.7272;15.6244
 2231;"Strasshof an der Nordbahn";48.3167;16.6667
 9162;"Strau";46.5333;14.25
 7522;"Strem";47.05;16.4167
@@ -1310,13 +1310,13 @@ Plz;Ort;Longitude;Latitude
 2604;"Theresienfeld";47.85;16.2333
 6335;"Thiersee";47.5833;12.0833
 4905;"Thomasroith";48.0833;13.6167
-6712;"Thüringen";47.2;9.76667
-6721;"Thüringerberg";47.2167;9.78306
+6712;"Thï¿½ringen";47.2;9.76667
+6721;"Thï¿½ringerberg";47.2167;9.78306
 8355;"Tieschen";46.7861;15.9422
 4850;"Timelkam";48;13.6
 8772;"Timmersdorf";47.3667;14.95
 8144;"Tobelbad";46.9456;15.3756
-6541;"Tösens";47.0167;10.6
+6541;"Tï¿½sens";47.0167;10.6
 4284;"Tragwein";48.3333;14.6167
 3160;"Traisen";48.0333;15.6
 2514;"Traiskirchen";48.0167;16.2833
@@ -1342,7 +1342,7 @@ Plz;Ort;Longitude;Latitude
 6293;"Tux";47.15;11.75
 5563;"Tweng";47.1833;13.6
 9441;"Twimberg";46.9161;14.8453
-8124;"Übelbach";47.2;15.3333
+8124;"ï¿½belbach";47.2;15.3333
 6271;"Uderns";47.3167;11.8667
 2122;"Ulrichskirchen";48.4;16.4833
 6441;"Umhausen";47.1333;10.9333
@@ -1350,9 +1350,9 @@ Plz;Ort;Longitude;Latitude
 5091;"Unken";47.65;12.7167
 9124;"Unterburg am Klopeiner See";46.6;14.6
 4231;"Untergaisbach";48.3333;14.5
-7435;"Unterkohlstätten";47.3833;16.3167
+7435;"Unterkohlstï¿½tten";47.3833;16.3167
 8352;"Unterlamm";46.85;14.0167
-8141;"Unterpremstätten";46.9647;15.4042
+8141;"Unterpremstï¿½tten";46.9647;15.4042
 7452;"Unterpullendorf";47.4667;16.5333
 8484;"Unterpurkla";46.7339;15.9078
 7371;"Unterrabnitz";47.45;16.3667
@@ -1376,19 +1376,19 @@ Plz;Ort;Longitude;Latitude
 9507;"Villach";46.6103;13.8558
 9508;"Villach";46.6103;13.8558
 6682;"Vils";47.55;10.6333
-4840;"Vöcklabruck";48.0167;13.65
-4870;"Vöcklamarkt";48;13.4833
+4840;"Vï¿½cklabruck";48.0167;13.65
+4870;"Vï¿½cklamarkt";48;13.4833
 8570;"Voitsberg";47.0333;15.15
 6111;"Volders";47.2833;11.5667
-9100;"Völkermarkt";46.6622;14.6344
-6176;"Völs";47.25;11.3333
-6177;"Völs";47.25;11.3333
+9100;"Vï¿½lkermarkt";46.6622;14.6344
+6176;"Vï¿½ls";47.25;11.3333
+6177;"Vï¿½ls";47.25;11.3333
 6134;"Vomp";47.3333;11.6833
 8250;"Vorau";47.4;15.8833
 4655;"Vorchdorf";48;13.9167
 8794;"Vordernberg";47.4667;15
 4574;"Vorderstoder";47.7;14.2167
-2331;"Vösendorf";48.1167;16.3333
+2331;"Vï¿½sendorf";48.1167;16.3333
 8435;"Wagna";46.75;15.55
 5602;"Wagrain";47.3353;13.2989
 3830;"Waidhofen an der Thaya";48.8167;15.2833
@@ -1396,7 +1396,7 @@ Plz;Ort;Longitude;Latitude
 6384;"Waidring";47.5833;12.5667
 4730;"Waizenkirchen";48.3333;13.8667
 6344;"Walchsee";47.65;12.3167
-8781;"Wald am Schoberpaß";47.45;14.6667
+8781;"Wald am Schoberpaï¿½";47.45;14.6667
 5742;"Wald im Pinzgau";47.25;12.2333
 8253;"Waldbach";47.3333;13.9167
 4391;"Waldhausen im Strudengau";48.2667;14.9333
@@ -1411,7 +1411,7 @@ Plz;Ort;Longitude;Latitude
 3313;"Wallsee";48.1667;14.7167
 2485;"Wampersdorf";47.9167;16.4167
 4552;"Wartberg an der Krems";47.9833;14.1167
-8661;"Wartberg im Mürztal";47.5167;15.5
+8661;"Wartberg im Mï¿½rztal";47.5167;15.5
 4224;"Wartberg ob der Aist";48.35;14.5
 6112;"Wattens";47.2833;11.6
 4182;"Waxenberg";48.4667;14.1833
@@ -1421,10 +1421,10 @@ Plz;Ort;Longitude;Latitude
 3411;"Weidling";48.2833;16.3
 2253;"Weikendorf";48.35;16.7667
 3823;"Weikertschlag an der Thaya";48.9;15.4667
-8481;"Weinburg am Saßbach";46.7536;15.7211
+8481;"Weinburg am Saï¿½bach";46.7536;15.7211
 2564;"Weissenbach an der Triesting";47.9667;16.0333
-9762;"Weißensee";47.3167;13.9667
-8741;"Weißkirchen in Steiermark";47.15;14.7333
+9762;"Weiï¿½ensee";47.3167;13.9667
+8741;"Weiï¿½kirchen in Steiermark";47.15;14.7333
 3351;"Weistrach";48.05;14.5833
 9344;"Weitensfeld";46.8333;15.1
 8473;"Weitersfeld an der Mur";46.7;15.7167
@@ -1447,7 +1447,7 @@ Plz;Ort;Longitude;Latitude
 8402;"Werndorf";46.9242;15.4908
 4783;"Wernstein am Inn";48.5;13.4667
 4085;"Wesenufer";48.45;13.8167
-8521;"Wettmannstätten";46.8306;15.3872
+8521;"Wettmannstï¿½tten";46.8306;15.3872
 4852;"Weyregg am Attersee";47.9;13.5667
 1004;"Wien";48.2;16.3667
 1010;"Wien";48.2;16.3667
@@ -1588,8 +1588,8 @@ Plz;Ort;Longitude;Latitude
 2811;"Wiesmath";47.6167;16.2833
 9374;"Wieting";46.8714;14.5436
 8924;"Wildalpen";47.65;14.9833
-9323;"Wildbad Einöd";47.0167;14.4
-2164;"Wildendürnbach";48.7378;16.5506
+9323;"Wildbad Einï¿½d";47.0167;14.4
+2164;"Wildendï¿½rnbach";48.7378;16.5506
 8410;"Wildon";46.8833;15.5167
 2462;"Wilfleinsdorf";48.0167;16.7167
 4073;"Wilhering";48.3167;14.2
@@ -1605,16 +1605,16 @@ Plz;Ort;Longitude;Latitude
 3012;"Wolfsgraben";48.15;16.1667
 2412;"Wolfsthal";48.1333;17
 6922;"Wolfurt";47.4667;9.75
-2752;"Wöllersdorf";47.8667;16.1667
-6300;"Wörgl";47.4833;12.0667
-8942;"Wörschach";47.55;14.15
-8293;"Wörth an der Lafnitz";47.2;16.0667
+2752;"Wï¿½llersdorf";47.8667;16.1667
+6300;"Wï¿½rgl";47.4833;12.0667
+8942;"Wï¿½rschach";47.55;14.15
+8293;"Wï¿½rth an der Lafnitz";47.2;16.0667
 7041;"Wulkaprodersdorf";47.8;16.5
 2041;"Wullersdorf";48.6167;16.1
 2064;"Wulzeshofen";48.7167;16.3
 8142;"Wundschuh";46.9264;15.4511
-3042;"Würmla";48.25;15.85
-2112;"Würnitz";48.4167;16.4167
+3042;"Wï¿½rmla";48.25;15.85
+2112;"Wï¿½rnitz";48.4167;16.4167
 3370;"Ybbs an der Donau";48.1667;15.0833
 3341;"Ybbsitz";47.9333;14.8833
 6511;"Zams";47.15;10.5833
@@ -1635,9 +1635,9 @@ Plz;Ort;Longitude;Latitude
 6170;"Zirl";47.2833;11.2333
 2225;"Zistersdorf";48.5333;16.75
 9713;"Zlan";46.7167;13.5833
-2871;"Zöbern";47.5;16.1167
+2871;"Zï¿½bern";47.5;16.1167
 2424;"Zurndorf";47.9667;17
-6763;"Zürs";47.1667;10.1667
+6763;"Zï¿½rs";47.1667;10.1667
 9343;"Zweinitz";46.8667;14.2333
 4180;"Zwettl an der Rodl";48.4667;14.2667
 2063;"Zwingendorf";48.7;16.2333
