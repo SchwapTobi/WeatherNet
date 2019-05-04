@@ -2,6 +2,9 @@ import java.util.Objects;
 
 public final class Location {
 
+    private static final String DELIMITER_COMMA = ", ";
+    private static final String DELIMITER = "_";
+
     private String id;
     private String name;
     private int zipCode;
@@ -21,12 +24,20 @@ public final class Location {
     }
 
     public void makeId(int id){
-        this.id = this.zipCode + "_" + id;
+        this.id = this.zipCode + DELIMITER + id;
+    }
+
+    public void setLatitude(double lat){
+        this.latitude = lat;
+    }
+
+    public void setLongitude(double longitude){
+        this.longitude = longitude;
     }
 
     @Override
     public String toString() {
-        return this.name + ", " + this.zipCode + ", " + this.id;
+        return this.name + DELIMITER_COMMA + this.zipCode + DELIMITER_COMMA + this.id + DELIMITER_COMMA + this.latitude + DELIMITER_COMMA + this.longitude;
     }
 
     @Override

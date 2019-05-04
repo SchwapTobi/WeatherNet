@@ -4,6 +4,7 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Parser {
 
@@ -12,6 +13,7 @@ public class Parser {
     private static final String INPUT_FILE_NAME = "zip.xml";
 
     private static String line;
+    private static Map<String,String> latLong = LatLong.getLatLongMap();
 
     public static void main(String[] args) {
         // reader and writer
@@ -28,7 +30,7 @@ public class Parser {
 
             // read xml line by line
             while ((line = xmlReader.readLine()) != null){
-                if (isXmlRow(line)){
+                if (isXmlPart(line)){
                     //skip all xml related lines
                     continue;
                 }
@@ -73,17 +75,29 @@ public class Parser {
                                 int number = 0;
                                 for (String name : names) {
                                     // new Location instance
-                                    Location location1 = new Location();
+                                    Location multipleLocation = new Location();
 
                                     // has same zip
-                                    location1.setZipCode(location.getZipCode());
-                                    location1.setName(convert(name));
-                                    location1.makeId(number);
-                                    locationList.add(location1);
+                                    multipleLocation.setZipCode(location.getZipCode());
+                                    multipleLocation.setName(convert(name));
+                                    multipleLocation.makeId(number);
+
+                                    double [] latitudeLongitude = getLatLong(multipleLocation);
+                                    if (latitudeLongitude != null){
+                                        multipleLocation.setLatitude(latitudeLongitude[0]);
+                                        multipleLocation.setLongitude(latitudeLongitude[1]);
+                                    }
+
+                                    locationList.add(multipleLocation);
                                     number++;
                                 }
                             } else {
                                 // no multiple towns with same zip code
+                                double [] latitudeLongitude = getLatLong(location);
+                                if (latitudeLongitude != null){
+                                    location.setLatitude(latitudeLongitude[0]);
+                                    location.setLongitude(latitudeLongitude[1]);
+                                }
                                 location.setName(convert(Parser.line));
                                 location.makeId(0);
                                 locationList.add(location);
@@ -118,7 +132,7 @@ public class Parser {
     }
 
     // check if line is xml stuff
-    private static boolean isXmlRow(String s){
+    private static boolean isXmlPart(String s){
         return (s.equals("<row>") || s.equals("</row>") || s.equals("<table>") || s.equals("</table>") || s.contains("?xml version"));
     }
 
@@ -134,33 +148,18 @@ public class Parser {
                 .replaceAll("&#246;","ö")
                 .replaceAll("&#228;","ä")
                 .replaceAll("&#252;","ü")
-                .replaceAll(",","-")
-                .replaceAll("<column>","")
-                .replaceAll("</column>","");
+                .replaceAll(",","-");
     }
 
-    // Location Object
-    /*
-    private static class Location {
-        private String id;
-        private String name;
-        private int zipCode;
-        private double latitude = 0;
-        private double longitude = 0;
-
-        public void setName(String name) {
-            this.name = name;
+    private static double[] getLatLong(Location location){
+        double[] latLongArray = new double[2];
+        if (latLong.get(String.valueOf(location.getZipCode())) != null) {
+            // latitude at [0], longitude at [1]
+            String[] data = latLong.get(String.valueOf(location.getZipCode())).split(";");
+            latLongArray[0] = Double.parseDouble(data[0]);
+            latLongArray[1] = Double.parseDouble(data[1]);
+            return latLongArray;
         }
-
-        public void setZipCode(int zip_code) {
-            this.zipCode = zip_code;
-        }
-
-        public void makeId(int id){
-            this.id =
-                    // name + "_" +
-                    this.zipCode + "_" + id;
-        }
+        return null;
     }
-    */
 }
