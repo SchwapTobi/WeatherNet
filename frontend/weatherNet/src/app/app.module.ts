@@ -11,6 +11,12 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 import {MorePage} from "../pages/more/more";
 import {ListPage} from "../pages/list/list";
 import {MapPage} from "../pages/map/map";
+import {AboutUsPage} from "../pages/about-us/about-us";
+import {GeneralSettingsPage} from "../pages/general-settings/general-settings";
+import {HomeDetailsPage} from "../pages/home-details/home-details";
+import {LicensesPage} from "../pages/licenses/licenses";
+import {LocationSettingsPage} from "../pages/location-settings/location-settings";
+import {NodeDetailsPage} from "../pages/node-details/node-details";
 
 @NgModule({
   declarations: [
@@ -20,6 +26,12 @@ import {MapPage} from "../pages/map/map";
     HomePage,
     TabsPage,
     MorePage,
+    AboutUsPage,
+    GeneralSettingsPage,
+    HomeDetailsPage,
+    LicensesPage,
+    LocationSettingsPage,
+    NodeDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -33,6 +45,12 @@ import {MapPage} from "../pages/map/map";
     HomePage,
     TabsPage,
     MorePage,
+    AboutUsPage,
+    GeneralSettingsPage,
+    HomeDetailsPage,
+    LicensesPage,
+    LocationSettingsPage,
+    NodeDetailsPage
   ],
   providers: [
     StatusBar,

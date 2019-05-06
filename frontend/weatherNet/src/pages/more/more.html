@@ -6,18 +6,31 @@
 
 <ion-content>
   <ion-list>
-
-    <ion-item>
-      <ion-icon name="happy" item-start></ion-icon>
-      Über Uns
-    </ion-item>
-    <ion-item>
-      <ion-icon name="key" item-start></ion-icon>
-      Lizenzen
-    </ion-item>
-    <ion-item>
-      <ion-icon name="logo-github" item-start></ion-icon>
-      Github-Projekt
-    </ion-item>
+    <ion-item-group>
+      <ion-item-divider color="light">Einstellungen</ion-item-divider>
+      <ion-item (click)="openLocationSettings()">
+        <ion-icon name="pin" item-start></ion-icon>
+        Standort
+      </ion-item>
+      <ion-item (click)="openGeneralSettings()">
+        <ion-icon name="settings" item-start></ion-icon>
+        App-Einstellungen
+      </ion-item>
+    </ion-item-group>
+    <ion-item-group>
+      <ion-item-divider color="light">Infos</ion-item-divider>
+      <ion-item (click)="openAboutUs()">
+        <ion-icon name="happy" item-start></ion-icon>
+        Über Uns
+      </ion-item>
+      <ion-item (click)="openLicences()">
+        <ion-icon name="key" item-start></ion-icon>
+        Lizenzen
+      </ion-item>
+      <ion-item (click)="openGithub()">
+        <ion-icon name="logo-github" item-start></ion-icon>
+        Github-Projekt
+      </ion-item>
+    </ion-item-group>
   </ion-list>
 </ion-content>
