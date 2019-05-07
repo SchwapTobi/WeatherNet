@@ -30,6 +30,8 @@ plugins/ios.json
 www/
 src/app/appConstants.ts
 *appConstants.ts
+*index.html
+
 $RECYCLE.BIN/
 
 .DS_Store

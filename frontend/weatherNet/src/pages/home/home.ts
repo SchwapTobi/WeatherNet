@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {App, NavController} from 'ionic-angular';
 // @ts-ignore
 import * as datag from '../../assets/selectedCities.json';
 
@@ -18,7 +18,6 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
     //test with Linz Area
     // this.process();
-
 
   }
 

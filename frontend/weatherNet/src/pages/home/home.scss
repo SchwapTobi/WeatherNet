@@ -1,18 +1,28 @@
 page-home {
+
+  //video background style, resize & blur
   video  {
+    filter: blur(5px);
+
     position: fixed;
     top: 50%;
     left: 50%;
+
     min-width: 100%;
     min-height: 100%;
+
     width: auto;
     height: auto;
-    z-index: -100;
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
+
+    z-index: -1;
     transform: translateX(-50%) translateY(-50%);
+    overflow: hidden;
+  }
+
+  //disable scroll bar in video view
+  .no-scroll .scroll-content{
+    overflow: hidden;
   }
 }
+
+
