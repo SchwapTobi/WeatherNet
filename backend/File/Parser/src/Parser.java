@@ -1,4 +1,5 @@
 import com.google.gson.GsonBuilder;
+import jdk.jfr.StackTrace;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -14,6 +15,7 @@ public class Parser {
 
     private static String line;
     private static Map<String,String> latLong = LatLong.getLatLongMap();
+    private static Map<String,String> latLongLinz = LatLongLinz.getLinzAndArea();
 
     public static void main(String[] args) {
         // reader and writer
@@ -153,13 +155,25 @@ public class Parser {
 
     private static double[] getLatLong(Location location){
         double[] latLongArray = new double[2];
-        if (latLong.get(String.valueOf(location.getZipCode())) != null) {
+        // as we got even more precise lat & long for getLinzAndArea and getLinzAndArea area
+        // favour this data
+
+        if (latLongLinz.get(String.valueOf(location.getZipCode())) != null){
+            // latitude at [0], longitude at [1]
+            String[] data = latLongLinz.get(String.valueOf(location.getZipCode())).split(";");
+            latLongArray[0] = Double.parseDouble(data[0]);
+            latLongArray[1] = Double.parseDouble(data[1]);
+
+        } else if (latLong.get(String.valueOf(location.getZipCode())) != null) {
             // latitude at [0], longitude at [1]
             String[] data = latLong.get(String.valueOf(location.getZipCode())).split(";");
             latLongArray[0] = Double.parseDouble(data[0]);
             latLongArray[1] = Double.parseDouble(data[1]);
-            return latLongArray;
+
+        } else {
+            // set null, no entry at all was found
+            latLongArray = null;
         }
-        return null;
+        return latLongArray;
     }
 }

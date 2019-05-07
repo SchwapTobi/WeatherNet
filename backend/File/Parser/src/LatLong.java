@@ -29,6 +29,10 @@ public class LatLong {
                 // val = lat, long
                 LAT_LONG_MAP.put(locData[0], locData[2] + DELIMITER + locData[3]);
             }
+            line = null;
+
+            reader.close();
+            reader = null;
 
         } catch (Exception e){
             e.printStackTrace();
