@@ -32,5 +32,27 @@
         Github-Projekt
       </ion-item>
     </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider color="light"></ion-item-divider>
+      <ion-item (click)="feedbackClick()">
+        <ion-label>
+          <ion-icon name="star"></ion-icon>
+          Feedback
+        </ion-label>
+      </ion-item>
+      <ion-item (click)="contactClick()">
+        <ion-label>
+          <ion-icon name="contact"></ion-icon>
+          Kontakt
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Version 1.0.0</ion-label>
+      </ion-item>
+    </ion-item-group>
+
   </ion-list>
+
+
 </ion-content>

@@ -1,3 +1,4 @@
+
 <ion-header>
   <ion-navbar>
     <ion-title>Allgemeine Einstellungen</ion-title>
@@ -8,6 +9,27 @@
   <ion-card-content>
     <div text-center>
       <img style="width: 60%; max-width: 300px" src="/assets/imgs/weathernet_logo_transparent.png">
+    </div>
+  </ion-card-content>
+
+  <!-- settings go here -->
+
+  <ion-card-content>
+    <div style="max-width: 500px; margin: auto!important;">
+      <ion-list>
+        <ion-item>
+          <ion-label>Einstellung</ion-label>
+          <ion-toggle [(ngModel)]="settingOne" (ionChange)="notifyOne()"></ion-toggle>
+        </ion-item>
+        <ion-item>
+          <ion-label>Einstellung</ion-label>
+          <ion-toggle [(ngModel)]="settingTwo" (ionChange)="notifyTwo()"></ion-toggle>
+        </ion-item>
+        <ion-item>
+          <ion-label >Einstellung</ion-label>
+          <ion-toggle [(ngModel)]="settingThree" (ionChange)="notifyThree()"></ion-toggle>
+        </ion-item>
+      </ion-list>
     </div>
   </ion-card-content>
 
