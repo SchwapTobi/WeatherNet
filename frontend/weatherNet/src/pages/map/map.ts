@@ -3,9 +3,10 @@ import {NavController} from 'ionic-angular';
 // @ts-ignore
 import * as loc from '../../assets/data/locations.json';
 import {NetLocation} from "../../model/position/location";
+import {Storage} from "@ionic/storage";
+import {NodeDetailsPage} from "../node-details/node-details";
 
 declare var google;
-
 
 @Component({
   selector: 'page-map',
@@ -33,7 +34,7 @@ export class MapPage {
     }
   };
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private storage: Storage) {
     this.CURRENT_LATITUDE = 48.303055555556;
     this.CURRENT_LONGITUDE = 14.290555555556266;
     this.MAP_RADIUS = 25;
@@ -147,13 +148,7 @@ export class MapPage {
 
     this.addLocationMarkers(this.map);
     this.addWeatherNodeMarker(this.map);
-    // this.addMarker(this.map);
   }
-
-  // for (let i = 0; i < max; i++) {
-  //   let obj = new Location(allData[i].zipCode.toString(), allData[i].name.toString());
-  //   console.log(obj);
-  //   this.allObjects.push(obj);
 
   checkForRadius(lat: number, long: number): boolean {
     let distance = 3958 * Math.PI * Math.sqrt(
@@ -169,6 +164,7 @@ export class MapPage {
   addLocationMarkers(map: any) {
     let allData = loc;
     let max = allData.length;
+    max = 10;
 
     var i;
     console.log("addMarker called..")
@@ -188,6 +184,7 @@ export class MapPage {
         });
         this.addMarkerListener(marker, i, this.map);
       } else if (currLoc.zipCode.toString().charAt(3) === '0') {
+        console.log("test");
         marker = new google.maps.Marker({
           position: new google.maps.LatLng(currLoc.latitude, currLoc.longitude),
           map: map,
@@ -226,27 +223,59 @@ export class MapPage {
     })(marker, i));
   }
 
-
   addWeatherNodeMarker(map: any) {
-    var infowindow = new google.maps.InfoWindow({
-      content: "<h2>ID</h2>"
-    });
 
-    var nodeCircle = new google.maps.Circle({
-      strokeColor: '#007fff',
-      strokeOpacity: 0.8,
-      strokeWeight: 3,
-      fillColor: '#007fff',
-      fillOpacity: 0.2,
-      map: map,
-      center: new google.maps.LatLng(48.303055555556, 14.290555555556266),
-      radius: 1500
-    });
+    let weatherNodes;
 
-    google.maps.event.addListener(nodeCircle, 'click', function (ev) {
-      infowindow.setPosition(nodeCircle.getCenter());
-      infowindow.open(map);
+    this.storage.get('weatherNodes').then((val) => {
+      weatherNodes = val;
+      for (let node of weatherNodes) {
+        console.log(node);
+
+        let sensors = "";
+        for (let sensor of node.measuring) {
+          sensors += "-" + sensor + "<br>";
+        }
+
+        let infowindow = new google.maps.InfoWindow({
+          content: "<h2><a id=" + node.nodeID + ">" + node.nodeID + "</a></h2><br>" + sensors
+        });
+
+        let lat = node.position.latitude;
+        let long = node.position.longitude;
+        let radius = node.radius;
+
+        let nodeCircle = new google.maps.Circle({
+          strokeColor: '#007fff',
+          strokeOpacity: 0.8,
+          strokeWeight: 3,
+          fillColor: '#007fff',
+          fillOpacity: 0.2,
+          map: map,
+          center: new google.maps.LatLng(lat, long),
+          radius: radius
+        });
+
+        google.maps.event.addListener(nodeCircle, 'click', () => {
+          infowindow.setPosition(nodeCircle.getCenter());
+          infowindow.open(map);
+          var el = document.getElementById(node.nodeID);
+          if (el) {
+            el.addEventListener('click', () => {
+              console.log(node.nodeID)
+              this.showDetails(node)
+            });
+          }
+        });
+
+      }
     });
+  }
+
+  showDetails(node: string) {
+    this.navCtrl.push(NodeDetailsPage, {
+      'node': node
+    })
   }
 
   updateMap() {

@@ -1,6 +1,5 @@
 export class NetLocation {
 
-
   id: string;
   latitude: number;
   longitude: number;

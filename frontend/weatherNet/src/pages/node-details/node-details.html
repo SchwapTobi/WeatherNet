@@ -6,10 +6,113 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>nodeDetails</ion-title>
+    <ion-title>Node #{{nodeID}}</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <div style="width:100%; height:50%; max-height: 300px;smax-width: 800px!important; " #map="" id="map"></div>
+  <ion-card style="padding: 10px; max-width: 800px!important; margin: auto; box-shadow: none !important;">
+    <ion-list>
+      <ion-card-content style="margin-top: -10px!important;text-align: center!important;" *ngIf="finishedLoading">
+        <button *ngFor="let item of weatherNode.measuring" class="item-subjects" ion-button round>{{item}}</button>
+        <ion-card style="text-align: left; padding: 10px; max-width: 800px!important; margin: auto; box-shadow: none !important;">
+          <div class="row" style="width: 100%">
+            <ion-card-title>Temperatur</ion-card-title>
+            <div style="display: block; width: 100%;">
+              <canvas baseChart #baseChart="base-chart" height="250"
+                      [datasets]="temperatures"
+                      [labels]="lineChartLabels"
+                      [options]="lineChartOptions"
+                      [colors]="lineChartColors"
+                      [legend]="lineChartLegend"
+                      [chartType]="lineChartType"
+                      (chartClick)="chartClicked($event)"></canvas>
+            </div>
+            <ion-card-title>Luftfeuchtigkeit</ion-card-title>
+            <div style="display: block; width: 100%;">
+              <canvas baseChart #baseChart="base-chart" height="250"
+                      [datasets]="humidities"
+                      [labels]="lineChartLabels"
+                      [options]="lineChartOptions"
+                      [colors]="lineChartColors"
+                      [legend]="lineChartLegend"
+                      [chartType]="lineChartType"
+                      (chartClick)="chartClicked($event)"></canvas>
+            </div>
+            <ion-card-title>Luftdruck</ion-card-title>
+            <div style="display: block; width: 100%;">
+              <canvas baseChart #baseChart="base-chart" height="250"
+                      [datasets]="pressures"
+                      [labels]="lineChartLabels"
+                      [options]="lineChartOptions"
+                      [colors]="lineChartColors"
+                      [legend]="lineChartLegend"
+                      [chartType]="lineChartType"
+                      (chartClick)="chartClicked($event)"></canvas>
+            </div>
+            <ion-card-title>Helligkeit</ion-card-title>
+            <div style="display: block; width: 100%;">
+              <canvas baseChart #baseChart="base-chart" height="250"
+                      [datasets]="brightnesses"
+                      [labels]="lineChartLabels"
+                      [options]="lineChartOptions"
+                      [colors]="lineChartColors"
+                      [legend]="lineChartLegend"
+                      [chartType]="lineChartType"
+                      (chartClick)="chartClicked($event)"></canvas>
+            </div>
+          </div>
 
+
+          <style type="text/css">
+            .tg {
+              border-collapse: collapse;
+              border-spacing: 0;
+            }
+
+            .tg td {
+              font-family: Arial, sans-serif;
+              font-size: 14px;
+              padding: 10px 5px;
+              border-style: solid;
+              border-width: 1px;
+              overflow: hidden;
+              word-break: normal;
+              border-color: black;
+            }
+
+            .tg th {
+              font-family: Arial, sans-serif;
+              font-size: 14px;
+              font-weight: normal;
+              padding: 10px 5px;
+              border-style: solid;
+              border-width: 1px;
+              overflow: hidden;
+              word-break: normal;
+              border-color: black;
+            }
+
+            .tg .tg-cjtp {
+              background-color: #ecf4ff;
+              border-color: inherit;
+              text-align: center;
+              vertical-align: top;
+              width: 55px;
+              margin-left: 10px
+            }
+
+            .tg .tg-0pky {
+              border-color: inherit;
+              text-align: left;
+              vertical-align: top;
+            }
+          </style>
+
+
+        </ion-card>
+      </ion-card-content>
+    </ion-list>
+  </ion-card>
 </ion-content>

@@ -6,6 +6,11 @@ import {WeatherNetAPP} from './app.component';
 import {HomePage} from '../pages/home/home';
 import {TabsPage} from '../pages/tabs/tabs';
 
+import {FIREBASE_CONFIG} from "./firebase-config";
+
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireDatabase, AngularFireDatabaseModule} from '@angular/fire/database';
+
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {MorePage} from "../pages/more/more";
@@ -17,6 +22,10 @@ import {HomeDetailsPage} from "../pages/home-details/home-details";
 import {LicensesPage} from "../pages/licenses/licenses";
 import {LocationSettingsPage} from "../pages/location-settings/location-settings";
 import {NodeDetailsPage} from "../pages/node-details/node-details";
+
+import {IonicStorageModule} from "@ionic/storage";
+import {ChartsModule} from "ng2-charts-x";
+
 
 @NgModule({
   declarations: [
@@ -35,7 +44,11 @@ import {NodeDetailsPage} from "../pages/node-details/node-details";
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(WeatherNetAPP)
+    IonicModule.forRoot(WeatherNetAPP),
+    IonicStorageModule.forRoot(),
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFireDatabaseModule,
+    ChartsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -55,7 +68,9 @@ import {NodeDetailsPage} from "../pages/node-details/node-details";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AngularFireDatabase,
+    Storage
   ]
 })
 export class AppModule {

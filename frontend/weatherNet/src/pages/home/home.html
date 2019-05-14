@@ -11,7 +11,7 @@
 
 <ion-content class="no-scroll">
   <!--Using the HTML5 video tag to display the matching video-->
-  <video autoplay loop src="assets/video/sun_cloudy.mp4"></video>
+  <video autoplay loop [muted]="true" src="{{getVideoTheme('thunderstorm')}}"></video>
   <ion-card style="width: 50%!important; margin: auto; margin-top: 30px; background:rgba(255,255,255,0.5)">
     <ion-card-content>
 
