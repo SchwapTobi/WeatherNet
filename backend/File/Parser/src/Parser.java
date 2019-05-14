@@ -1,5 +1,8 @@
+import Maps.LatLong;
+import Maps.LatLongLinz;
+import Maps.State;
+import Model.Location;
 import com.google.gson.GsonBuilder;
-import jdk.jfr.StackTrace;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -7,24 +10,28 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class Parser {
+import static Constants.Files.*;
+import static Constants.Characters.*;
 
-    // file names
-    private static final String OUTPUT_FILE_NAME = "zip.json";
-    private static final String INPUT_FILE_NAME = "zip.xml";
+// this class combines all data
+public class Parser {
 
     private static String line;
     private static Map<String,String> latLong = LatLong.getLatLongMap();
     private static Map<String,String> latLongLinz = LatLongLinz.getLinzAndArea();
+    private static Map<String,String> zipMap = State.getZipStateMap();
 
     public static void main(String[] args) {
+
+        System.out.println("Start parsing ...");
+
         // reader and writer
         BufferedReader xmlReader;
         BufferedWriter jsonOutputWriter;
         try {
             // setup reader and writer
-            jsonOutputWriter = new BufferedWriter(new FileWriter(OUTPUT_FILE_NAME));
-            xmlReader = new BufferedReader(new InputStreamReader(new FileInputStream(INPUT_FILE_NAME), StandardCharsets.UTF_8));
+            jsonOutputWriter = new BufferedWriter(new FileWriter(OUTPUT_FILE));
+            xmlReader = new BufferedReader(new InputStreamReader(new FileInputStream(LOCATION_DATA), StandardCharsets.UTF_8));
 
             // to match .json format
             jsonOutputWriter.append("[");
@@ -36,7 +43,7 @@ public class Parser {
                     //skip all xml related lines
                     continue;
                 }
-                // create new Location instance
+                // create new Model.Location instance
                 Location location = new Location();
 
                 // create ArrayList
@@ -69,9 +76,9 @@ public class Parser {
 
                             // lineNum can contain multiple town names
                             // if so, split them and add them seperately with same zip
-                            if (Parser.line.contains(", ")){
+                            if (Parser.line.contains(COMMA_SPACE)){
                                 // split on each ", "
-                                String names[] = Parser.line.split(", ");
+                                String names[] = Parser.line.split(COMMA_SPACE);
 
                                 // used to differentiate id's
                                 int number = 0;
@@ -89,6 +96,7 @@ public class Parser {
                                         multipleLocation.setLatitude(latitudeLongitude[0]);
                                         multipleLocation.setLongitude(latitudeLongitude[1]);
                                     }
+                                    multipleLocation.setState(getCountry(multipleLocation));
 
                                     locationList.add(multipleLocation);
                                     number++;
@@ -102,6 +110,7 @@ public class Parser {
                                 }
                                 location.setName(convert(Parser.line));
                                 location.makeId(0);
+                                location.setState(getCountry(location));
                                 locationList.add(location);
                             }
                             break;
@@ -114,7 +123,7 @@ public class Parser {
                         jsonOutputWriter.append(new GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create().toJson(loc));
 
                         // to match .json format,
-                        jsonOutputWriter.append("," + "\n");
+                        jsonOutputWriter.append(COMMA + "\n");
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -131,6 +140,9 @@ public class Parser {
         } catch (Exception e){
             e.printStackTrace();
         }
+
+        System.out.println("Done");
+
     }
 
     // check if line is xml stuff
@@ -150,23 +162,26 @@ public class Parser {
                 .replaceAll("&#246;","ö")
                 .replaceAll("&#228;","ä")
                 .replaceAll("&#252;","ü")
-                .replaceAll(",","-");
+                .replaceAll("&#196;", "Ä")
+                .replaceAll("&#214","Ö")
+                .replaceAll("&#220","Ü")
+                .replaceAll(COMMA,"-");
     }
 
     private static double[] getLatLong(Location location){
         double[] latLongArray = new double[2];
-        // as we got even more precise lat & long for getLinzAndArea and getLinzAndArea area
-        // favour this data
+        // as we got more precise lat & long for Linz and area
+        // use that, if possible
 
         if (latLongLinz.get(String.valueOf(location.getZipCode())) != null){
             // latitude at [0], longitude at [1]
-            String[] data = latLongLinz.get(String.valueOf(location.getZipCode())).split(";");
+            String[] data = latLongLinz.get(String.valueOf(location.getZipCode())).split(SEMICOLON);
             latLongArray[0] = Double.parseDouble(data[0]);
             latLongArray[1] = Double.parseDouble(data[1]);
 
         } else if (latLong.get(String.valueOf(location.getZipCode())) != null) {
             // latitude at [0], longitude at [1]
-            String[] data = latLong.get(String.valueOf(location.getZipCode())).split(";");
+            String[] data = latLong.get(String.valueOf(location.getZipCode())).split(SEMICOLON);
             latLongArray[0] = Double.parseDouble(data[0]);
             latLongArray[1] = Double.parseDouble(data[1]);
 
@@ -175,5 +190,9 @@ public class Parser {
             latLongArray = null;
         }
         return latLongArray;
+    }
+
+    private static String getCountry(Location location){
+        return zipMap.get(String.valueOf(location.getZipCode()));
     }
 }
