@@ -30,7 +30,7 @@ Für die Wetterstation wird ein Raspberry Pi Zero verwendet, das in einem 3D-ged
 
 - [Wiki](https://github.com/SchwapTobi/WeatherNet/wiki)
 
-- [Demo](https://projects.tobias-schwap.at/weatherNet)
+- [Demo](https://tobias-schwap.at/projects/weatherNet)
 
   
 

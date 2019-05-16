@@ -1,3 +1,5 @@
+package Maps;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
@@ -5,10 +7,11 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
+import static Constants.Files.*;
+import static Constants.Characters.*;
+
 public class LatLongLinz {
 
-    private static final String INPUT_FILE_NAME = "locations.json";
-    private static final String DELIMITER = "},\\{";
     private static final Map<String,String> LAT_LONG_MAP = new HashMap<>();
 
     private static BufferedReader reader;
@@ -16,12 +19,12 @@ public class LatLongLinz {
 
     public static Map<String,String> getLinzAndArea(){
         try {
-            reader = new BufferedReader(new InputStreamReader(new FileInputStream(INPUT_FILE_NAME), StandardCharsets.UTF_8));
+            reader = new BufferedReader(new InputStreamReader(new FileInputStream(LINZ_DATA), StandardCharsets.UTF_8));
 
             // file has only one line
-            locData = reader.readLine().split(DELIMITER);
+            locData = reader.readLine().split(JSON_SPLIT);
             for (String s: locData) {
-                String[] data = parse(s).split(",");
+                String[] data = parse(s).split(COMMA);
 
                 if (data.length < 5 || data[3].contains("0.00000") || data[4].contains("0.00000")){
                     // skip entry, if:
@@ -30,7 +33,7 @@ public class LatLongLinz {
                     continue;
                 }
                 // key is zip, rest is array
-                LAT_LONG_MAP.put( data[0], data[4] + ";" + data[3]);
+                LAT_LONG_MAP.put( data[0], data[4] + SEMICOLON + data[3]);
             }
 
             reader.close();
@@ -42,7 +45,7 @@ public class LatLongLinz {
     }
 
     private static String parse(String s){
-        // is needed as this input type is .json
+        // is needed as input type is .json
         // remove .json
         return s.replaceAll("[\\[\\]]", "") // remove '[' and ']'
                 .replaceAll(":","") // remove ':'

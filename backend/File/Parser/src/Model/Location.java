@@ -1,15 +1,14 @@
+package Model;
+
 import java.util.Objects;
+import static Constants.Characters.*;
 
 public final class Location {
 
-    // for output
-    private static final String DELIMITER_COMMA = ", ";
-
-    // for id
-    private static final String DELIMITER = "_";
-
     private String id;
     private String name;
+    private String state;
+    private final String country = "AT";
     private int zipCode;
     private double latitude = 0;
     private double longitude = 0;
@@ -39,7 +38,7 @@ public final class Location {
     public void makeId(int id){
         // this method sets the id, after creating it
         // scheme: zipCode_id
-        this.id = this.zipCode + DELIMITER + id;
+        this.id = this.zipCode + UNDERSCORE + id;
     }
 
     public double getLatitude(){
@@ -58,16 +57,30 @@ public final class Location {
         this.longitude = longitude;
     }
 
+    public String getCountry(){
+        return country;
+    }
+
+    public String getState(){
+        return this.state;
+    }
+
+    public void setState(String s){
+        this.state = s;
+    }
+
     @Override
     public String toString() {
         return new StringBuilder()
                 .append(this.name)
-                .append(DELIMITER_COMMA)
+                .append(COMMA_SPACE)
                 .append(this.id)
-                .append(DELIMITER_COMMA)
+                .append(COMMA_SPACE)
                 .append(this.latitude)
-                .append(DELIMITER_COMMA)
+                .append(COMMA_SPACE)
                 .append(this.longitude)
+                .append(COMMA_SPACE)
+                .append(this.getState())
                 .toString();
     }
 
