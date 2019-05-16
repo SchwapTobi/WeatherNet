@@ -1,9 +1,10 @@
 import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {ModalController, NavController, PopoverController} from 'ionic-angular';
 
 import {MorePage} from "../more/more";
 import {AngularFireDatabase} from '@angular/fire/database';
 import {Storage} from "@ionic/storage";
+import {LicensesPage} from "../licenses/licenses";
 
 @Component({
   selector: 'page-home',

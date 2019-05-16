@@ -9,7 +9,6 @@ page-node-details {
   color: #fff;
   height: 22px !important;
   margin-left: 3px!important;
-
 }
 
 gmnoprint a, .gmnoprint span {
@@ -42,4 +41,12 @@ img[src="http://maps.gstatic.com/mapfiles/google_white.png"] {
 
 img[src="http://maps.gstatic.com/mapfiles/api-3/images/google_white2.png"] {
   display: none
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  line-break: auto;
+  justify-content: center;
+  margin-bottom: 20px;
 }

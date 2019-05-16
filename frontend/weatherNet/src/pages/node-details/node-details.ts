@@ -1,8 +1,10 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
-import {NavController, NavParams} from 'ionic-angular';
+import {ModalController, NavController, NavParams} from 'ionic-angular';
 import {Storage} from "@ionic/storage";
 import {AngularFireDatabase} from '@angular/fire/database';
 import {BaseChartDirective} from "ng2-charts-x";
+import {CONSTANTS} from "../../app/appConstants";
+import {WeatherChartPage} from "../weather-chart/weather-chart";
 
 declare var google;
 
@@ -40,7 +42,7 @@ export class NodeDetailsPage {
   map: any;
   nodeLogs: Array<any> = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private storage: Storage, private afDatabase: AngularFireDatabase) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private storage: Storage, private afDatabase: AngularFireDatabase, public modalCtrl: ModalController) {
     this.finishedLoading = false;
     this.weatherNode = this.navParams.get('node');
     this.nodeID = this.weatherNode.nodeID;
@@ -181,7 +183,7 @@ export class NodeDetailsPage {
       lables.push(item.timestamp.toString().substring(0, 9) + " " + item.timestamp.toString().substring(11, 16));
       temps.push(item.temperature);
       humidities.push(item.humidity.toString().replace('%', ''));
-      brightnesses.push(item.brightness);
+      brightnesses.push(CONSTANTS.BRIGHTNESS_MAXIMUM - item.brightness);
       pressures.push(item.pressure);
 
     }
@@ -192,5 +194,15 @@ export class NodeDetailsPage {
     this.brightnesses[0].data = (brightnesses);
     this.pressures[0].data = (pressures);
 
+  }
+
+  //reformat array of sensors (inline html regex does not work..)
+  formatList(sensors: any): string {
+    return sensors.toString().replace(/,/g, ", ");
+  }
+
+  expandChart() {
+    const modal = this.modalCtrl.create(WeatherChartPage);
+    modal.present();
   }
 }

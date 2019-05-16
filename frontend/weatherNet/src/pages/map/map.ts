@@ -256,17 +256,27 @@ export class MapPage {
           radius: radius
         });
 
+        //add listener for click at circle
         google.maps.event.addListener(nodeCircle, 'click', () => {
           infowindow.setPosition(nodeCircle.getCenter());
           infowindow.open(map);
           var el = document.getElementById(node.nodeID);
           if (el) {
             el.addEventListener('click', () => {
-              console.log(node.nodeID)
               this.showDetails(node)
             });
           }
         });
+
+        infowindow.open(map);
+        infowindow.close(map);
+        //add listener for click at info field inside circle
+        var el = document.getElementById(node.nodeID);
+        if (el) {
+          el.addEventListener('click', () => {
+            this.showDetails(node)
+          });
+        }
 
       }
     });

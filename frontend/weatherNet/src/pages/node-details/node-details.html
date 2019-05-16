@@ -15,55 +15,109 @@
   <ion-card style="padding: 10px; max-width: 800px!important; margin: auto; box-shadow: none !important;">
     <ion-list>
       <ion-card-content style="margin-top: -10px!important;text-align: center!important;" *ngIf="finishedLoading">
-        <button *ngFor="let item of weatherNode.measuring" class="item-subjects" ion-button round>{{item}}</button>
-        <ion-card style="text-align: left; padding: 10px; max-width: 800px!important; margin: auto; box-shadow: none !important;">
-          <div class="row" style="width: 100%">
-            <ion-card-title>Temperatur</ion-card-title>
-            <div style="display: block; width: 100%;">
-              <canvas baseChart #baseChart="base-chart" height="250"
-                      [datasets]="temperatures"
-                      [labels]="lineChartLabels"
-                      [options]="lineChartOptions"
-                      [colors]="lineChartColors"
-                      [legend]="lineChartLegend"
-                      [chartType]="lineChartType"
-                      (chartClick)="chartClicked($event)"></canvas>
-            </div>
-            <ion-card-title>Luftfeuchtigkeit</ion-card-title>
-            <div style="display: block; width: 100%;">
-              <canvas baseChart #baseChart="base-chart" height="250"
-                      [datasets]="humidities"
-                      [labels]="lineChartLabels"
-                      [options]="lineChartOptions"
-                      [colors]="lineChartColors"
-                      [legend]="lineChartLegend"
-                      [chartType]="lineChartType"
-                      (chartClick)="chartClicked($event)"></canvas>
-            </div>
-            <ion-card-title>Luftdruck</ion-card-title>
-            <div style="display: block; width: 100%;">
-              <canvas baseChart #baseChart="base-chart" height="250"
-                      [datasets]="pressures"
-                      [labels]="lineChartLabels"
-                      [options]="lineChartOptions"
-                      [colors]="lineChartColors"
-                      [legend]="lineChartLegend"
-                      [chartType]="lineChartType"
-                      (chartClick)="chartClicked($event)"></canvas>
-            </div>
-            <ion-card-title>Helligkeit</ion-card-title>
-            <div style="display: block; width: 100%;">
-              <canvas baseChart #baseChart="base-chart" height="250"
-                      [datasets]="brightnesses"
-                      [labels]="lineChartLabels"
-                      [options]="lineChartOptions"
-                      [colors]="lineChartColors"
-                      [legend]="lineChartLegend"
-                      [chartType]="lineChartType"
-                      (chartClick)="chartClicked($event)"></canvas>
+        <!--list node infos-->
+        <ion-card>
+          <ion-card-title color="primary">Node #{{nodeID}}</ion-card-title>
+          <ion-item>
+            <ion-icon name="pin"></ion-icon>
+            Standort:&#09;{{weatherNode.position.name}}, {{weatherNode.position.state}}
+          </ion-item>
+          <ion-item>
+            <ion-icon name="happy"></ion-icon>
+            Betreiber:&#09;{{weatherNode.owner}}
+          </ion-item>
+          <ion-item>
+            <ion-icon name="analytics"></ion-icon>
+            Sensoren:&#09; {{this.formatList(weatherNode.sensors)}}
+          </ion-item>
+          <ion-item>
+            <ion-icon name="radio-button-off"></ion-icon>
+            Radius (Genauigkeit):&#09;{{weatherNode.radius.toString()}}m
+          </ion-item>
+
+          <!--list measurement methods-->
+          <div class="flex-container">
+            <div *ngFor="let item of weatherNode.measuring">
+              <button class="item-subjects" ion-button round *ngIf="item">
+                <div>{{item}}</div>
+              </button>
             </div>
           </div>
+        </ion-card>
 
+        <!--list charts-->
+        <ion-card
+          style="text-align: left; padding: 10px; max-width: 800px!important; margin: auto; box-shadow: none !important;">
+          <div class="row" style="width: 100%">
+            <!--check for sensors-->
+            <div *ngIf="weatherNode.measuring.toString().toLocaleLowerCase().indexOf('temperature')>0"
+                 style="text-align: left; padding: 10px; max-width: 800px!important; margin: auto; box-shadow: none !important;">
+              <ion-card-title>Temperatur
+                <small><sup style="font-size:.7em; line-height:2em;">(°C)</sup></small>
+              </ion-card-title>
+              <div style="display: block; width: 100%;">
+                <canvas baseChart #baseChart="base-chart" height="300"
+                        [datasets]="temperatures"
+                        [labels]="lineChartLabels"
+                        [options]="lineChartOptions"
+                        [colors]="lineChartColors"
+                        [legend]="lineChartLegend"
+                        [chartType]="lineChartType"
+                        (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div>
+
+            <div *ngIf="weatherNode.measuring.toString().toLocaleLowerCase().indexOf('humidity')>0"
+                 style="text-align: left; padding: 10px; max-width: 800px!important; margin: auto; box-shadow: none !important;">
+              <ion-card-title>Luftfeuchtigkeit
+                <small><sup style="font-size:.7em; line-height:2em;">(%)</sup></small>
+              </ion-card-title>
+              <div style="display: block; width: 100%;">
+                <canvas baseChart #baseChart="base-chart" height="300"
+                        [datasets]="humidities"
+                        [labels]="lineChartLabels"
+                        [options]="lineChartOptions"
+                        [colors]="lineChartColors"
+                        [legend]="lineChartLegend"
+                        [chartType]="lineChartType"
+                        (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div>
+
+            <div *ngIf="weatherNode.measuring.toString().toLocaleLowerCase().indexOf('pressure')>0"
+                 style="text-align: left; padding: 10px; max-width: 800px!important; margin: auto; box-shadow: none !important;">
+              <ion-card-title>Luftdruck
+                <small><sup style="font-size:.7em; line-height:2em;">(hPa)</sup></small>
+              </ion-card-title>
+              <div style="display: block; width: 100%;">
+                <canvas baseChart #baseChart="base-chart" height="300"
+                        [datasets]="pressures"
+                        [labels]="lineChartLabels"
+                        [options]="lineChartOptions"
+                        [colors]="lineChartColors"
+                        [legend]="lineChartLegend"
+                        [chartType]="lineChartType"
+                        (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div>
+
+            <div *ngIf="weatherNode.measuring.toString().toLocaleLowerCase().indexOf('luminance')>0"
+                 style="text-align: left; padding: 10px; max-width: 800px!important; margin: auto; box-shadow: none !important;">
+              <ion-card-title>Helligkeit
+                <small><sup style="font-size:.7em; line-height:2em;">(rel)</sup></small>
+              </ion-card-title>
+              <div style="display: block; width: 100%;">
+                <canvas baseChart #baseChart="base-chart" height="300"
+                        [datasets]="brightnesses"
+                        [labels]="lineChartLabels"
+                        [options]="lineChartOptions"
+                        [colors]="lineChartColors"
+                        [legend]="lineChartLegend"
+                        [chartType]="lineChartType"
+                        (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div>
+          </div>
 
           <style type="text/css">
             .tg {
