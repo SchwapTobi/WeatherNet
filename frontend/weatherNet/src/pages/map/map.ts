@@ -35,8 +35,13 @@ export class MapPage {
   };
 
   constructor(public navCtrl: NavController, private storage: Storage) {
+    //define current position to LINZ for testing:
+    //TODO: get pos from device
+
     this.CURRENT_LATITUDE = 48.303055555556;
     this.CURRENT_LONGITUDE = 14.290555555556266;
+
+    //show pins in radius of 25km
     this.MAP_RADIUS = 25;
   }
 
@@ -44,6 +49,7 @@ export class MapPage {
     this.loadMap();
   }
 
+  //load google maps, set minimalisitc theme, center map
   loadMap() {
     let mapOptions = {
       center: new google.maps.LatLng(this.CURRENT_LATITUDE, this.CURRENT_LONGITUDE),
@@ -150,6 +156,7 @@ export class MapPage {
     this.addWeatherNodeMarker(this.map);
   }
 
+  //check if position is in radius
   checkForRadius(lat: number, long: number): boolean {
     let distance = 3958 * Math.PI * Math.sqrt(
       (this.CURRENT_LATITUDE - lat)
@@ -198,6 +205,7 @@ export class MapPage {
     }
   }
 
+  //add markers to map
   addMarkerListener(marker: any, i: number, map: any) {
     google.maps.event.addListener(marker, 'click', (function (marker, i) {
       var infowindow = new google.maps.InfoWindow();
@@ -223,24 +231,32 @@ export class MapPage {
     })(marker, i));
   }
 
+  //add marker for each weatherNode
   addWeatherNodeMarker(map: any) {
 
     let weatherNodes;
 
+    //iterate over all nodes
     this.storage.get('weatherNodes').then((val) => {
       weatherNodes = val;
+
       for (let node of weatherNodes) {
         console.log(node);
-
         let sensors = "";
+
+        //list features in marker
         for (let sensor of node.measuring) {
-          sensors += "-" + sensor + "<br>";
+          if (sensor) {
+            sensors += "-" + sensor + "<br>";
+          }
         }
 
+        //clickable ID
         let infowindow = new google.maps.InfoWindow({
           content: "<h2><a id=" + node.nodeID + ">" + node.nodeID + "</a></h2><br>" + sensors
         });
 
+        //define position & radius
         let lat = node.position.latitude;
         let long = node.position.longitude;
         let radius = node.radius;

@@ -1,9 +1,17 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>weatherChart</ion-title>
+    <ion-title>{{description}}</ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
-
+  <div style="display: block; width: 100%; height: 100%;">
+    <canvas baseChart #baseChart="base-chart" height="280"
+            [datasets]="data"
+            [labels]="labels"
+            [options]="lineChartOptions"
+            [colors]="lineChartColors"
+            [legend]="lineChartLegend"
+            [chartType]="lineChartType"
+            (chartClick)="chartClicked($event)"></canvas>
+  </div>
 </ion-content>

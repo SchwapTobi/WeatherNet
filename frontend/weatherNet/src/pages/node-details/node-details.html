@@ -1,9 +1,3 @@
-<!--
-  Generated template for the NodeDetailsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
   <ion-navbar>
     <ion-title>Node #{{nodeID}}</ion-title>
@@ -52,13 +46,18 @@
             <!--check for sensors-->
             <div *ngIf="weatherNode.measuring.toString().toLocaleLowerCase().indexOf('temperature')>0"
                  style="text-align: left; padding: 10px; max-width: 800px!important; margin: auto; box-shadow: none !important;">
-              <ion-card-title>Temperatur
+              <ion-card-title>
+                <ion-icon color="secondary" name="expand"
+                          (click)="expandChart('Temperatur', temperatures, tempChartLabels)"></ion-icon>
+                Temperatur
                 <small><sup style="font-size:.7em; line-height:2em;">(°C)</sup></small>
+                <ion-icon color="secondary" style="float: right;" name="funnel" item-right
+                (click)="changeRepresentationByTime('Temperatur', temperatures, tempChartLabels)"></ion-icon>
               </ion-card-title>
               <div style="display: block; width: 100%;">
                 <canvas baseChart #baseChart="base-chart" height="300"
                         [datasets]="temperatures"
-                        [labels]="lineChartLabels"
+                        [labels]="tempChartLabels"
                         [options]="lineChartOptions"
                         [colors]="lineChartColors"
                         [legend]="lineChartLegend"
@@ -69,13 +68,18 @@
 
             <div *ngIf="weatherNode.measuring.toString().toLocaleLowerCase().indexOf('humidity')>0"
                  style="text-align: left; padding: 10px; max-width: 800px!important; margin: auto; box-shadow: none !important;">
-              <ion-card-title>Luftfeuchtigkeit
+              <ion-card-title>
+                <ion-icon color="secondary" name="expand"
+                          (click)="expandChart('Luftfeuchtigkeit', humidities, humChartLabels)"></ion-icon>
+                Luftfeuchtigkeit
                 <small><sup style="font-size:.7em; line-height:2em;">(%)</sup></small>
+                <ion-icon color="secondary" style="float: right;" name="funnel" item-right
+                          (click)="changeRepresentationByTime('Luftfeuchtigkeit', humidities, humChartLabels)"></ion-icon>
               </ion-card-title>
               <div style="display: block; width: 100%;">
                 <canvas baseChart #baseChart="base-chart" height="300"
                         [datasets]="humidities"
-                        [labels]="lineChartLabels"
+                        [labels]="humChartLabels"
                         [options]="lineChartOptions"
                         [colors]="lineChartColors"
                         [legend]="lineChartLegend"
@@ -86,14 +90,19 @@
 
             <div *ngIf="weatherNode.measuring.toString().toLocaleLowerCase().indexOf('pressure')>0"
                  style="text-align: left; padding: 10px; max-width: 800px!important; margin: auto; box-shadow: none !important;">
-              <ion-card-title>Luftdruck
+              <ion-card-title>
+                <ion-icon color="secondary" name="expand"
+                          (click)="expandChart('Luftdruck', pressures, pressureChartLabels)"></ion-icon>
+                Luftdruck
                 <small><sup style="font-size:.7em; line-height:2em;">(hPa)</sup></small>
+                <ion-icon color="secondary" style="float: right;" name="funnel" item-right
+                          (click)="changeRepresentationByTime('Luftdruck', pressures, pressureChartLabels)"></ion-icon>
               </ion-card-title>
               <div style="display: block; width: 100%;">
                 <canvas baseChart #baseChart="base-chart" height="300"
                         [datasets]="pressures"
-                        [labels]="lineChartLabels"
-                        [options]="lineChartOptions"
+                        [labels]="pressureChartLabels"
+                        [options]="options"
                         [colors]="lineChartColors"
                         [legend]="lineChartLegend"
                         [chartType]="lineChartType"
@@ -103,13 +112,18 @@
 
             <div *ngIf="weatherNode.measuring.toString().toLocaleLowerCase().indexOf('luminance')>0"
                  style="text-align: left; padding: 10px; max-width: 800px!important; margin: auto; box-shadow: none !important;">
-              <ion-card-title>Helligkeit
+              <ion-card-title>
+                <ion-icon color="secondary" name="expand"
+                          (click)="expandChart('Helligkeit', brightnesses, brightChartLabels)"></ion-icon>
+                Helligkeit
                 <small><sup style="font-size:.7em; line-height:2em;">(rel)</sup></small>
+                <ion-icon color="secondary" style="float: right;" name="funnel" item-right
+                          (click)="changeRepresentationByTime('Helligkeit', brightnesses, brightChartLabels)"></ion-icon>
               </ion-card-title>
               <div style="display: block; width: 100%;">
                 <canvas baseChart #baseChart="base-chart" height="300"
                         [datasets]="brightnesses"
-                        [labels]="lineChartLabels"
+                        [labels]="brightChartLabels"
                         [options]="lineChartOptions"
                         [colors]="lineChartColors"
                         [legend]="lineChartLegend"
