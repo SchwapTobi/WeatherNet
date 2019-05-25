@@ -21,6 +21,145 @@
           </ion-item>
         </ion-card>
 
+        <!--list charts-->
+        <ion-card
+          style="text-align: left; padding: 10px; max-width: 800px!important; margin: auto; box-shadow: none !important;">
+          <div class="row" style="width: 100%">
+            <!--check for sensors-->
+            <div
+              style="text-align: left; padding: 10px; max-width: 800px!important; margin: auto; box-shadow: none !important;">
+              <ion-card-title>
+                <ion-icon color="secondary" name="expand"
+                          (click)="expandChart('Temperatur', temperatures, tempChartLabels)"></ion-icon>
+                Temperatur
+                <small><sup style="font-size:.7em; line-height:2em;">(°C)</sup></small>
+                <!--<ion-icon color="secondary" style="float: right;" name="funnel" item-right-->
+                <!--(click)="changeRepresentationByTime('Temperatur', temperatures, tempChartLabels)"></ion-icon>-->
+              </ion-card-title>
+              <div style="display: block; width: 100%;">
+                <canvas baseChart #baseChart="base-chart" height="300"
+                        [datasets]="temperatures"
+                        [labels]="tempChartLabels"
+                        [options]="lineChartOptions"
+                        [colors]="lineChartColors"
+                        [legend]="lineChartLegend"
+                        [chartType]="lineChartType"
+                        (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div>
+
+            <div
+              style="text-align: left; padding: 10px; max-width: 800px!important; margin: auto; box-shadow: none !important;">
+              <ion-card-title>
+                <ion-icon color="secondary" name="expand"
+                          (click)="expandChart('Luftfeuchtigkeit', humidities, humChartLabels)"></ion-icon>
+                Luftfeuchtigkeit
+                <small><sup style="font-size:.7em; line-height:2em;">(%)</sup></small>
+                <ion-icon color="secondary" style="float: right;" name="funnel" item-right
+                          (click)="changeRepresentationByTime('Luftfeuchtigkeit', humidities, humChartLabels)"></ion-icon>
+              </ion-card-title>
+              <div style="display: block; width: 100%;">
+                <canvas baseChart #baseChart="base-chart" height="300"
+                        [datasets]="humidities"
+                        [labels]="humChartLabels"
+                        [options]="lineChartOptions"
+                        [colors]="lineChartColors"
+                        [legend]="lineChartLegend"
+                        [chartType]="lineChartType"
+                        (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div>
+
+            <div
+              style="text-align: left; padding: 10px; max-width: 800px!important; margin: auto; box-shadow: none !important;">
+              <ion-card-title>
+                <ion-icon color="secondary" name="expand"
+                          (click)="expandChart('Luftdruck', pressures, pressureChartLabels)"></ion-icon>
+                Luftdruck
+                <small><sup style="font-size:.7em; line-height:2em;">(hPa)</sup></small>
+                <ion-icon color="secondary" style="float: right;" name="funnel" item-right
+                          (click)="changeRepresentationByTime('Luftdruck', pressures, pressureChartLabels)"></ion-icon>
+              </ion-card-title>
+              <div style="display: block; width: 100%;">
+                <canvas baseChart #baseChart="base-chart" height="300"
+                        [datasets]="pressures"
+                        [labels]="pressureChartLabels"
+                        [options]="options"
+                        [colors]="lineChartColors"
+                        [legend]="lineChartLegend"
+                        [chartType]="lineChartType"
+                        (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div>
+
+            <div
+              style="text-align: left; padding: 10px; max-width: 800px!important; margin: auto; box-shadow: none !important;">
+              <ion-card-title>
+                <ion-icon color="secondary" name="expand"
+                          (click)="expandChart('Niederschlag', downfall, downfallChartLabels)"></ion-icon>
+                Niederschlag
+                <small><sup style="font-size:.7em; line-height:2em;">(rel)</sup></small>
+                <ion-icon color="secondary" style="float: right;" name="funnel" item-right
+                          (click)="changeRepresentationByTime('Niederschlag', downfall, downfallChartLabels)"></ion-icon>
+              </ion-card-title>
+              <div style="display: block; width: 100%;">
+                <canvas baseChart #baseChart="base-chart" height="300"
+                        [datasets]="downfall"
+                        [labels]="downfallChartLabels"
+                        [options]="lineChartOptions"
+                        [colors]="lineChartColors"
+                        [legend]="lineChartLegend"
+                        [chartType]="lineChartType"
+                        (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div>
+
+            <style type="text/css">
+              .tg {
+                border-collapse: collapse;
+                border-spacing: 0;
+              }
+
+              .tg td {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                padding: 10px 5px;
+                border-style: solid;
+                border-width: 1px;
+                overflow: hidden;
+                word-break: normal;
+                border-color: black;
+              }
+
+              .tg th {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                font-weight: normal;
+                padding: 10px 5px;
+                border-style: solid;
+                border-width: 1px;
+                overflow: hidden;
+                word-break: normal;
+                border-color: black;
+              }
+
+              .tg .tg-cjtp {
+                background-color: #ecf4ff;
+                border-color: inherit;
+                text-align: center;
+                vertical-align: top;
+                width: 55px;
+                margin-left: 10px
+              }
+
+              .tg .tg-0pky {
+                border-color: inherit;
+                text-align: left;
+                vertical-align: top;
+              }
+            </style>
+          </div>
+        </ion-card>
 
       </ion-card-content>
     </ion-list>
