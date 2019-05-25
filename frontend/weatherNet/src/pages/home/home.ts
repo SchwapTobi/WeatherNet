@@ -1,10 +1,13 @@
 import {Component} from '@angular/core';
-import {ModalController, NavController, PopoverController} from 'ionic-angular';
+import {NavController} from 'ionic-angular';
 
 import {MorePage} from "../more/more";
 import {AngularFireDatabase} from '@angular/fire/database';
 import {Storage} from "@ionic/storage";
-import {LicensesPage} from "../licenses/licenses";
+import {WeatherUTIL} from "../../model/weather/weatherUTIL";
+import {DomSanitizer} from "@angular/platform-browser";
+import {NetLocation} from "../../model/position/location";
+import {CityDetailsPage} from "../city-details/city-details";
 
 @Component({
   selector: 'page-home',
@@ -16,8 +19,64 @@ export class HomePage {
 
   weatherNodes: Array<any> = [];
 
-  constructor(public navCtrl: NavController, private afDatabase: AngularFireDatabase, private storage: Storage) {
+  cityColor = '#f5f5f5';
+  currentTemperature: number;
+  forecast: any;
+
+  forecastActivated: boolean;
+
+  primaryLocation: NetLocation = {
+    'id': null,
+    'latitude': 48.3060922,
+    'longitude': 14.2863136,
+    'zipCode': "4020",
+    'name': "Linz",
+    'state': "Oberösterreich",
+    'country': "AT"
+  };
+
+  constructor(public navCtrl: NavController, private afDatabase: AngularFireDatabase, private storage: Storage, private sanitizer: DomSanitizer) {
+
+
+    this.forecastActivated = false;
     this.loadWeatherStations();
+
+    let city = this.primaryLocation.name;
+    let key1 = "currentWeatherIn" + city;
+    let color;
+    let currentTemp;
+
+    let data = this.storage.get(key1).then(data => {
+      currentTemp = data.main.temp_max;
+      color = WeatherUTIL.getColorFromTemp(currentTemp);
+
+    }).then(value => {
+      this.cityColor = color;
+      this.currentTemperature = currentTemp.toString().split(".")[0];
+    });
+
+    let key2 = "forecastWeatherIn" + city;
+    let forecast = [];
+    let forecastLoader = this.storage.get(key2).then(data => {
+      forecast.push(data);
+
+    }).then(value => {
+      this.forecast = forecast;
+      this.loadForeCast();
+    });
+  }
+
+  ionViewDidLoad() {
+
+  }
+
+  round(num: any): number {
+    return Math.round(num * 10) / 10;
+  }
+
+  loadForeCast() {
+    this.forecastActivated = true;
+    console.log(this.forecast)
   }
 
   //show App-infos
@@ -58,7 +117,52 @@ export class HomePage {
         break;
     }
     return url;
+  }
 
+  showCityDetails(city: NetLocation) {
+    this.navCtrl.push(CityDetailsPage, {
+      'city': city
+    })
+  }
+
+
+  getIconForWeather(weatherAttribute: String): String {
+    var name = "sunny";
+    switch (weatherAttribute) {
+      case "clear sky":
+        name = "sunny";
+        break;
+      case "few clouds":
+        name = "partly-sunny";
+        break;
+      case "scattered clouds":
+        name = "cloudy";
+        break;
+      case "broken clouds":
+        name = "cloudy";
+        break;
+      case "shower rain":
+        name = "rainy";
+        break;
+      case "rain":
+        name = "rainy";
+        break;
+      case "thunderstorm":
+        name = "flash";
+        break;
+      case "snow":
+        name = "snow";
+        break;
+      case "mist":
+        name = "cloudy";
+        break;
+    }
+    return name;
+
+  }
+
+  getColor(temp: any): string {
+    return WeatherUTIL.getColorFromTemp(temp);
   }
 
   //fetch stations from database
@@ -67,6 +171,6 @@ export class HomePage {
       this.weatherNodes = res;
       this.storage.set('weatherNodes', this.weatherNodes);
     });
-
   }
+
 }

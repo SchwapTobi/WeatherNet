@@ -39,4 +39,8 @@ export class WeatherChartPage {
     console.log('ionViewDidLoad WeatherChartPage');
   }
 
+  closeModal() {
+    this.navCtrl.pop();
+  }
+
 }

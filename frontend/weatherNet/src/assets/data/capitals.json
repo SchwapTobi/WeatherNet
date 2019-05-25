@@ -1,0 +1,64 @@
+[{
+  "name": "Salzburg",
+  "state": "Salzburg",
+  "country": "AT",
+  "zipCode": 5020,
+  "latitude": 47.8002144,
+  "longitude": 13.0434967
+},{
+  "name": "Linz",
+  "state": "Oberösterreich",
+  "country": "AT",
+  "zipCode": 4020,
+  "latitude": 48.3060922,
+  "longitude": 14.2863136
+},{
+  "name": "Innsbruck",
+  "state": "Tirol",
+  "country": "AT",
+  "zipCode": 6020,
+  "latitude": 47.2656592,
+  "longitude": 11.3914262
+},{
+  "name": "Bregenz",
+  "state": "Vorarlberg",
+  "country": "AT",
+  "zipCode": 6900,
+  "latitude": 47.5035518,
+  "longitude": 9.7447367
+},{
+  "name": "Klagenfurt",
+  "state": "Kärnten",
+  "country": "AT",
+  "zipCode": 9020,
+  "latitude": 46.623977,
+  "longitude": 14.307176
+},{
+  "name": "Graz",
+  "state": "Steiermark",
+  "country": "AT",
+  "zipCode": 8010,
+  "latitude": 47.0706987,
+  "longitude": 15.4362544
+},{
+  "name": "Eisenstadt",
+  "state": "Burgenland",
+  "country": "AT",
+  "zipCode": 7000,
+  "latitude": 47.8468342,
+  "longitude": 16.5221295
+},{
+  "name": "Wien",
+  "state": "Wien",
+  "country": "AT",
+  "zipCode": 1010,
+  "latitude": 48.2108685,
+  "longitude": 16.3550599
+},{
+  "name": "St. Pölten",
+  "state": "Niederösterreich",
+  "country": "AT",
+  "zipCode": 3100,
+  "latitude": 48.2044255,
+  "longitude": 15.6207213
+}]

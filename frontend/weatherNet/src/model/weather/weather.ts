@@ -1,12 +1,15 @@
 import {NetLocation} from "../position/location";
+import {CONSTANTS} from "../../app/appConstants";
+import {Storage} from "@ionic/storage";
 
-
-export class Weather {
+export class WeatherRequest {
 
   location: NetLocation;
-  forecast: Array<any>;
+  forecast: Array<any> = [];
+
   sunInfo: any; // contains sunrise & -set time
-  getJSON = function (url, callback) {
+
+  private getJSON = function (url, callback) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.responseType = 'json';
@@ -20,10 +23,10 @@ export class Weather {
     };
     xhr.send();
   };
-  private key: String = "9c50c2dcd31a37bd9eb6bc8955b4000e";
+  private key: String = CONSTANTS.OPENWEATHER_KEY;
   private url: String;
 
-  constructor(location: NetLocation) {
+  constructor(location: NetLocation, private storage: Storage) {
     this.location = location;
 
     if (this.location.longitude != 0.0 && this.location.latitude != 0.0) {
@@ -51,31 +54,34 @@ export class Weather {
     return 'https://api.openweathermap.org/data/2.5/weather?zip=' + zip + ',at&units=metric&appid=' + this.key;
   }
 
-  async getForecast(url: String) {
+  getForecast(url: String) {
     var _this = this;
     this.getJSON(url, function (err, data) {
       if (err !== null) {
         console.log('Something went wrong: ' + err);
       } else {
-        _this.forecast = data.list;
-        console.log("forecast log:");
-        console.log(_this.forecast);
-        console.log("forecast log end");
+        for (let item of data.list) {
+          _this.forecast.push(item);
+        }
+        _this.storage.set('currentWeatherIn'+_this.location.name, _this.forecast[0]);
+        _this.storage.set('forecastWeatherIn'+_this.location.name, _this.forecast);
+      }
+    });
+
+  }
+
+  getSun(url: String) {
+    var _this = this;
+    this.getJSON(url, function (err, data) {
+      if (err !== null) {
+        console.log('Something went wrong: ' + err);
+      } else {
+        _this.sunInfo = data.sys;
       }
     });
   }
 
-  async getSun(url: String) {
-    var _this = this;
-    this.getJSON(url, function (err, data) {
-      if (err !== null) {
-        console.log('Something went wrong: ' + err);
-      } else {
-        console.log("data sun:");
-        _this.sunInfo = data.sys;
-        console.log(_this.sunInfo);
-        console.log("data sun end");
-      }
-    });
+  getWeather() {
+    return this.forecast[0];
   }
 }

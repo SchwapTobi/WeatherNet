@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{city.name}}, {{city.state}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div style="width:100%; height:50%; max-height: 300px;smax-width: 800px!important; " #map="" id="map"></div>
+  <ion-card style="padding: 10px; max-width: 800px!important; margin: auto; box-shadow: none !important;">
+    <ion-list>
+      <!--Location infos-->
+      <ion-card-content style="margin-top: -10px!important;text-align: center!important;">
+        <ion-card>
+          <ion-item>
+            <ion-icon name="pin"></ion-icon>
+            Standort:&#09;{{city.zipCode}} {{city.name}}, {{city.state}}, {{city.country}}
+          </ion-item>
+          <ion-item>
+            <ion-icon name="pin"></ion-icon>
+            Koordinaten:&#09;{{city.latitude}}, {{city.longitude}}
+          </ion-item>
+        </ion-card>
+
+
+      </ion-card-content>
+    </ion-list>
+  </ion-card>
+</ion-content>

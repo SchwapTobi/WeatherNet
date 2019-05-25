@@ -26,6 +26,7 @@ import {NodeDetailsPage} from "../pages/node-details/node-details";
 import {IonicStorageModule} from "@ionic/storage";
 import {ChartsModule} from "ng2-charts-x";
 import {WeatherChartPage} from "../pages/weather-chart/weather-chart";
+import {CityDetailsPage} from "../pages/city-details/city-details";
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import {WeatherChartPage} from "../pages/weather-chart/weather-chart";
     LicensesPage,
     LocationSettingsPage,
     NodeDetailsPage,
-    WeatherChartPage
+    WeatherChartPage,
+    CityDetailsPage,
   ],
   imports: [
     BrowserModule,
@@ -66,7 +68,8 @@ import {WeatherChartPage} from "../pages/weather-chart/weather-chart";
     LicensesPage,
     LocationSettingsPage,
     NodeDetailsPage,
-    WeatherChartPage
+    WeatherChartPage,
+    CityDetailsPage,
   ],
   providers: [
     StatusBar,
@@ -77,4 +80,5 @@ import {WeatherChartPage} from "../pages/weather-chart/weather-chart";
   ]
 })
 export class AppModule {
+
 }

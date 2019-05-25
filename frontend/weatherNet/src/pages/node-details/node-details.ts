@@ -159,7 +159,7 @@ export class NodeDetailsPage {
     this.addLocationMarker(this.map);
   }
 
-//add marker for current weatherNode
+  //add marker for current weatherNode
   addLocationMarker(map: any) {
     let marker = new google.maps.Marker({
       position: new google.maps.LatLng(this.weatherNode.position.latitude, this.weatherNode.position.longitude),
@@ -203,7 +203,7 @@ export class NodeDetailsPage {
 
     this.lineChartLabels = lables;
 
-    //split labels for individual scalings
+    //labels for individual scalings
     this.tempChartLabels = lables;
     this.humChartLabels = lables;
     this.brightChartLabels = lables;
@@ -492,7 +492,5 @@ export class NodeDetailsPage {
       this.brightnesses = newData;
       this.brightChartLabels = newLineChartLabels;
     }
-
-
   }
 }

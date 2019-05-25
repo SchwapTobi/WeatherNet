@@ -1,7 +1,61 @@
 page-home {
+  .pulse {
+    width: 20px;
+    height: 24px;
+    border-radius: 50%;
+    padding-top: -10px!important;
+    box-shadow: 0 0 0 0 rgba(230,57,70, 0.4);
+    animation: pulse 1.5s infinite;
+   }
+
+  @keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(230,57,70, 0.4);
+      box-shadow: 0 0 0 0 rgba(230,57,70, 0.4);
+    }
+    70% {
+      -moz-box-shadow: 0 0 0 5px rgba(230,57,70, 0.2);
+      box-shadow: 0 0 0 5px rgba(230,57,70, 0.2);
+    }
+    100% {
+      -moz-box-shadow: 0 0 0 0 rgba(230,57,70, 0);
+      box-shadow: 0 0 0 0 rgba(230,57,70, 0);
+    }
+  }
+
+  @import url('https://fonts.googleapis.com/css?family=Aldrich');
+  #city {
+    font-family: Aldrich, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 45px;
+    letter-spacing: 4px;
+    color: #424242;
+  }
+
+  #zipcode {
+    margin-top: -20px;
+    font-family: Aldrich, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 4px;
+    color: #424242;
+  }
+
+  #icon {
+    margin-top: 0px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 4px;
+    text-shadow: rgb(0, 0, 0) 3px 2px 2px;
+  }
 
   //video background style, resize & blur
-  video  {
+  video {
     filter: blur(1px);
 
     position: fixed;
@@ -20,9 +74,8 @@ page-home {
   }
 
   //disable scroll bar in video view
-  .no-scroll .scroll-content{
+  .no-scroll .scroll-content {
     overflow: hidden;
   }
+
 }
-
-

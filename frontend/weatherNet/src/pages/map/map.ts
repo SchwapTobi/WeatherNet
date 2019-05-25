@@ -1,10 +1,14 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
 import {NavController} from 'ionic-angular';
-// @ts-ignore
-import * as loc from '../../assets/data/locations.json';
 import {NetLocation} from "../../model/position/location";
 import {Storage} from "@ionic/storage";
 import {NodeDetailsPage} from "../node-details/node-details";
+// @ts-ignore
+import * as loc from '../../assets/data/locations.json';
+// @ts-ignore
+import * as CAPITALS from '../../assets/data/capitals.json';
+import {WeatherUTIL} from "../../model/weather/weatherUTIL";
+import {CityDetailsPage} from "../city-details/city-details";
 
 declare var google;
 
@@ -19,20 +23,7 @@ export class MapPage {
   map: any;
   CURRENT_LATITUDE: number;
   CURRENT_LONGITUDE: number;
-
   MAP_RADIUS: number;
-
-  //prerender svg icons
-  icons = {
-    sunny: {
-      path: 'M0,1a1,1 0 1,0 2,0a1,1 0 1,0 -2,0',
-      fillColor: 'yellow',
-      fillOpacity: 0.8,
-      scale: 1,
-      strokeColor: 'gold',
-      strokeWeight: 14
-    }
-  };
 
   constructor(public navCtrl: NavController, private storage: Storage) {
     //define current position to LINZ for testing:
@@ -154,6 +145,7 @@ export class MapPage {
 
     this.addLocationMarkers(this.map);
     this.addWeatherNodeMarker(this.map);
+    this.addCapitalWeatherMarker(this.map);
   }
 
   //check if position is in radius
@@ -171,10 +163,10 @@ export class MapPage {
   addLocationMarkers(map: any) {
     let allData = loc;
     let max = allData.length;
-    max = 10;
+    max = 0;
 
     var i;
-    console.log("addMarker called..")
+    // console.log("addMarker called..")
     for (i = 0; i < max; i++) {
       let marker;
       let currLoc: NetLocation = allData[i];
@@ -191,7 +183,7 @@ export class MapPage {
         });
         this.addMarkerListener(marker, i, this.map);
       } else if (currLoc.zipCode.toString().charAt(3) === '0') {
-        console.log("test");
+        // console.log("test");
         marker = new google.maps.Marker({
           position: new google.maps.LatLng(currLoc.latitude, currLoc.longitude),
           map: map,
@@ -223,7 +215,7 @@ export class MapPage {
         var el = document.getElementById(marker.data.id);
         if (el) {
           el.addEventListener('click', () => {
-            console.log(marker.data.zipCode)
+            // console.log(marker.data.zipCode)
           });
         }
 
@@ -231,17 +223,25 @@ export class MapPage {
     })(marker, i));
   }
 
+  //add markers to map
+  addCityMarkerListener(marker: any, map: any) {
+    var _this = this;
+    marker.addListener('click', function () {
+      _this.showCityDetails(marker.data);
+    });
+  }
+
   //add marker for each weatherNode
   addWeatherNodeMarker(map: any) {
-
-    let weatherNodes;
-
+    let weatherNode;
     //iterate over all nodes
     this.storage.get('weatherNodes').then((val) => {
-      weatherNodes = val;
+      weatherNode = val;
 
-      for (let node of weatherNodes) {
-        console.log(node);
+      console.log(weatherNode);
+
+      for (let node of weatherNode) {
+        // console.log(node);
         let sensors = "";
 
         //list features in marker
@@ -298,9 +298,65 @@ export class MapPage {
     });
   }
 
+  //add marker for each weatherNode
+  addCapitalWeatherMarker(map: any) {
+    let capitals = CAPITALS;
+    //iterate over all capitals & load weather from localstorage
+    for (let city of capitals) {
+      let key = "currentWeatherIn" + city.name;
+      let data = this.storage.get(key).then(data => {
+        console.log(data);
+        let maxTemp: string = WeatherUTIL.getColorFromTemp(data.main.temp_max);
+
+        // let maxTemp:string = "#ffa500";
+        let label = data.main.temp_max.toString().split(".")[0];
+
+        //define svg icon
+        let rawSVG = '<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">\n' +
+          ' <g>\n' +
+          '  <ellipse ry="10" rx="10" id="svg_1" cy="10" cx="10" fill-opacity="null" stroke-opacity="null" stroke-width="null"  fill="#424242"/>\n' +
+          '  <ellipse ry="9" rx="9" id="svg_3" cy="10" cx="10" stroke-opacity="null" stroke-width="null" fill="{MAX}"/>\n' +
+          ' </g>\n' +
+          '</svg>';
+
+        //set color from current temperature
+        let svg = rawSVG.replace('{MAX}', maxTemp);
+
+        let infowindow = new google.maps.InfoWindow({
+          content: "<h2><a id=" + city.id + ">" + city.zipcode + " " + city.name + "</a></h2><br>"
+        });
+
+        let marker = new google.maps.Marker({
+          position: new google.maps.LatLng(city.latitude, city.longitude),
+          map: map,
+          icon: {
+            url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg),
+            scaledSize: new google.maps.Size(40, 40)
+          },
+          label: {
+            text: "" + label,
+            color: 'black',
+            fontSize: '17px',
+            fontWeight: 'bold'
+          },
+          data: city,
+          center: new google.maps.LatLng(city.latitude, city.longitude),
+          optimized: true
+        });
+        this.addCityMarkerListener(marker, this.map);
+      });
+    }
+  }
+
   showDetails(node: string) {
     this.navCtrl.push(NodeDetailsPage, {
       'node': node
+    })
+  }
+
+  showCityDetails(city: NetLocation) {
+    this.navCtrl.push(CityDetailsPage, {
+      'city': city
     })
   }
 
