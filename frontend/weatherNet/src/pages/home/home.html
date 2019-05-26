@@ -39,7 +39,7 @@
           <ion-title>Aktuell</ion-title>
           <div class="row header" *ngFor="let item of forecast[0]; let i=index"
                style="margin:auto!important; text-align:center!important;">
-            <div class="row header" *ngIf="i<1" style="margin:auto!important; text-align:center!important;">
+            <div class="row header" *ngIf="i<1" style="margin:auto!important; text-align:center!important; font-size: large!important;">
               <div class="col" style="width: 60px!important;">{{item.dt_txt.toString().substring(10,16)}}</div>
               <div class="col" style="width: 20px!important;">
                 <ion-icon name="{{getIconForWeather(item.weather[0].description)}}"
