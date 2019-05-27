@@ -16,18 +16,20 @@
     style="width: 80%!important;max-width: 400px!important; margin: auto; margin-top: 30px; background:rgba(255,255,255,0.8)">
     <ion-card-content>
       <div>
-        <div id="city">LINZ</div>
+        <div id="city">{{primaryLocation.name.toUpperCase()}}</div>
       </div>
       <div>
-        <div id="zipcode">4040
-          <ion-icon class="pulse" name="pin" style="color: #e63946!important; font-size: 33px!important;margin-left: -15px"
+        <div id="zipcode">{{primaryLocation.zipCode}}
+          <ion-icon class="pulse" name="pin"
+                    style="color: #e63946!important; font-size: 33px!important;margin-left: -15px"
                     (click)="showCityDetails(primaryLocation)"></ion-icon>
         </div>
       </div>
 
       <div style="text-align: center">
         <div id="icon" [ngStyle]="{'color': cityColor}">
-          <ion-icon name="cloudy-night"></ion-icon>
+          <ion-icon name="{{getIconForWeather(currentWeather)}}"
+                    [ngStyle]="{'color': getIconColorForWeather(currentWeather)}"></ion-icon>
           {{currentTemperature}}°
         </div>
       </div>
@@ -39,11 +41,12 @@
           <ion-title>Aktuell</ion-title>
           <div class="row header" *ngFor="let item of forecast[0]; let i=index"
                style="margin:auto!important; text-align:center!important;">
-            <div class="row header" *ngIf="i<1" style="margin:auto!important; text-align:center!important; font-size: large!important;">
+            <div class="row header" *ngIf="i<1"
+                 style="margin:auto!important; text-align:center!important; font-size: large!important;">
               <div class="col" style="width: 60px!important;">{{item.dt_txt.toString().substring(10,16)}}</div>
               <div class="col" style="width: 20px!important;">
                 <ion-icon name="{{getIconForWeather(item.weather[0].description)}}"
-                          [ngStyle]="{'color': getColor(item.main.temp)}"></ion-icon>
+                          [ngStyle]="{'color': getIconColorForWeather(item.weather[0].description)}"></ion-icon>
               </div>
               <div class="col" style="width: 60px!important;">{{round(item.main.temp_min)}}°</div>
               <div class="col" style="width: 80px!important;white-space: nowrap;">{{round(item.main.pressure)}} hPa
@@ -52,13 +55,14 @@
           </div>
           <br>
           <ion-title>Tagesvorschau</ion-title>
+
           <div class="row header" *ngFor="let item of forecast[0]; let i=index"
                style="margin:auto!important; text-align:center!important;">
             <div class="row header" *ngIf="i<10&&i>=1" style="margin:auto!important; text-align:center!important;">
               <div class="col" style="width: 60px!important;">{{item.dt_txt.toString().substring(10,16)}}</div>
-              <div class="col" style="width: 20px!important;">
+              <div class="col" style="width: 20px!important; text-align: center">
                 <ion-icon name="{{getIconForWeather(item.weather[0].description)}}"
-                          [ngStyle]="{'color': getColor(item.main.temp)}"></ion-icon>
+                          [ngStyle]="{'color': getIconColorForWeather(item.weather[0].description)}"></ion-icon>
               </div>
               <div class="col" style="width: 60px!important;">{{round(item.main.temp_min)}}°</div>
               <div class="col" style="width: 80px!important;white-space: nowrap;">{{round(item.main.pressure)}} hPa
@@ -69,6 +73,5 @@
       </div>
     </ion-card-content>
   </ion-card>
-  <!--<button (click)="download()">download json</button>-->
 </ion-content>
 

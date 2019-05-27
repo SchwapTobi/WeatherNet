@@ -5,6 +5,7 @@ import {Storage} from "@ionic/storage";
 import {AngularFireDatabase} from '@angular/fire/database';
 import {NetLocation} from "../../model/position/location";
 import {WeatherChartPage} from "../weather-chart/weather-chart";
+import {WeatherUTIL} from "../../model/weather/weatherUTIL";
 
 declare var google;
 
@@ -38,12 +39,51 @@ export class CityDetailsPage {
 
   forecast: Array<any> = [];
 
+  currentWeather: any;
+
   storageKey: string;
 
+  forecastActivated: boolean;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private storage: Storage, private afDatabase: AngularFireDatabase, public modalCtrl: ModalController, public alertCtrl: AlertController) {
+    this.forecastActivated = false;
     this.city = this.navParams.get('city');
-    this.storageKey = "forecastWeatherIn" + this.city.name;
+
+    this.storageKey = "forecastWeatherIn" + this.city.name+this.city.zipCode;
+
+
+    let forecast = [];
+    let forecastLoader = this.storage.get(this.storageKey).then(data => {
+      forecast.push(data);
+    }).then(value => {
+      this.currentWeather = forecast[0][0];
+      console.log(this.currentWeather)
+      this.curretWeatherLoaded();
+    });
   }
+
+  curretWeatherLoaded() {
+    this.forecastActivated = true;
+    console.log(this.forecast)
+  }
+
+
+  round(num: any): number {
+    return Math.round(num * 10) / 10;
+  }
+
+  getIconForWeather(weatherAttribute: String): String {
+    return WeatherUTIL.getIconForWeather(weatherAttribute);
+  }
+
+  getColorForWeather(weatherAttribute: String): String {
+    return WeatherUTIL.getIconColorForWeather(weatherAttribute);
+  }
+
+  getColor(temp: any): string {
+    return WeatherUTIL.getColorFromTemp(temp);
+  }
+
 
   ionViewDidLoad() {
     this.loadMap();
@@ -315,7 +355,6 @@ export class CityDetailsPage {
       checked: false
     });
 
-
     let newData: Array<any> = [{data: [], label: desc}];
     let newLineChartLabels: Array<any> = [];
 
@@ -352,7 +391,8 @@ export class CityDetailsPage {
             if ((labelDate - currentDate) < ONE_HOUR * 6) {
               newData[0].data[index++] = data[0].data[i];
               let temp = isoDATE.toString();
-              newLineChartLabels.push(temp);
+              //dont show full date on every label
+              newLineChartLabels.push(temp.substring(11, 16));
             }
           }
           this.saveChangedRepresentation(desc, newData, newLineChartLabels);
@@ -378,7 +418,8 @@ export class CityDetailsPage {
             if ((labelDate - currentDate) < ONE_DAY) {
               newData[0].data[index++] = data[0].data[i];
               let temp = isoDATE.toString();
-              newLineChartLabels.push(temp);
+              //dont show full date on every label
+              newLineChartLabels.push(temp.substring(11, 16));
             }
           }
           this.saveChangedRepresentation(desc, newData, newLineChartLabels);
@@ -404,7 +445,12 @@ export class CityDetailsPage {
             if ((labelDate - currentDate) < ONE_DAY * 3) {
               newData[0].data[index++] = data[0].data[i];
               let temp = isoDATE.toString();
-              newLineChartLabels.push(temp);
+              //dont show full date on every label
+              if ((i > 0) && (newLineChartLabels[i - 1].substring(0, 9) == temp.substring(0, 9))) {
+                newLineChartLabels.push(temp.substring(11, 16));
+              } else {
+                newLineChartLabels.push(temp.substring(0, 16));
+              }
             }
           }
           this.saveChangedRepresentation(desc, newData, newLineChartLabels);
@@ -431,7 +477,12 @@ export class CityDetailsPage {
               newData[0].data[index++] = data[0].data[i];
               //inline tostring does not work..
               let temp = isoDATE.toString();
-              newLineChartLabels.push(temp);
+              //dont show full date on every label
+              if ((i > 0) && (newLineChartLabels[i - 1].substring(0, 9) == temp.substring(0, 9))) {
+                newLineChartLabels.push(temp.substring(11, 16));
+              } else {
+                newLineChartLabels.push(temp.substring(0, 16));
+              }
             }
           }
           console.log(newLineChartLabels)

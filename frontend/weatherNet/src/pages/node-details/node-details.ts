@@ -5,6 +5,7 @@ import {AngularFireDatabase} from '@angular/fire/database';
 import {BaseChartDirective} from "ng2-charts-x";
 import {CONSTANTS} from "../../app/appConstants";
 import {WeatherChartPage} from "../weather-chart/weather-chart";
+import {WeatherUTIL} from "../../model/weather/weatherUTIL";
 
 declare var google;
 
@@ -57,7 +58,6 @@ export class NodeDetailsPage {
     console.log(this.weatherNode.position);
     this.finishedLoading = true;
   }
-
 
   ionViewDidLoad() {
     this.loadMap();

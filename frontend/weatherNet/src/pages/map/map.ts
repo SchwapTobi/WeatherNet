@@ -303,7 +303,7 @@ export class MapPage {
     let capitals = CAPITALS;
     //iterate over all capitals & load weather from localstorage
     for (let city of capitals) {
-      let key = "currentWeatherIn" + city.name;
+      let key = "currentWeatherIn" + city.name+city.zipCode;
       let data = this.storage.get(key).then(data => {
         console.log(data);
         let maxTemp: string = WeatherUTIL.getColorFromTemp(data.main.temp_max);

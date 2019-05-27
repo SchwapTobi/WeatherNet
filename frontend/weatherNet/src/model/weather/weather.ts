@@ -63,8 +63,8 @@ export class WeatherRequest {
         for (let item of data.list) {
           _this.forecast.push(item);
         }
-        _this.storage.set('currentWeatherIn'+_this.location.name, _this.forecast[0]);
-        _this.storage.set('forecastWeatherIn'+_this.location.name, _this.forecast);
+        _this.storage.set('currentWeatherIn' + _this.location.name + _this.location.zipCode, _this.forecast[0]);
+        _this.storage.set('forecastWeatherIn' + _this.location.name + _this.location.zipCode, _this.forecast);
       }
     });
 

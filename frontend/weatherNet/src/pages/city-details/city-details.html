@@ -9,16 +9,28 @@
   <ion-card style="padding: 10px; max-width: 800px!important; margin: auto; box-shadow: none !important;">
     <ion-list>
       <!--Location infos-->
-      <ion-card-content style="margin-top: -10px!important;text-align: center!important;">
+      <ion-card-content *ngIf="forecastActivated" style="margin-top: -10px!important;text-align: center!important;">
         <ion-card>
           <ion-item>
             <ion-icon name="pin"></ion-icon>
-            Standort:&#09;{{city.zipCode}} {{city.name}}, {{city.state}}, {{city.country}}
+            &#09;{{city.zipCode}} {{city.name}}, {{city.state}}, {{city.country}}
           </ion-item>
-          <ion-item>
-            <ion-icon name="pin"></ion-icon>
-            Koordinaten:&#09;{{city.latitude}}, {{city.longitude}}
-          </ion-item>
+
+          <ion-title>Aktuelles Wetter:</ion-title>
+          <div class="row header" style="margin:auto!important; text-align:center!important;">
+            <div class="row header"
+                 style="margin:auto!important; text-align:center!important; font-size: x-large!important;">
+              <div class="col" style="width: 25px!important;">
+                <ion-icon name="{{getIconForWeather(currentWeather.weather[0].description)}}"
+                          [ngStyle]="{'color': getColorForWeather(currentWeather.main.temp)}"></ion-icon>
+              </div>
+              <div class="col" style="width: 80px!important;">{{round(currentWeather.main.temp_min)}}°</div>
+              <div class="col" style="width: 80px!important;white-space: nowrap;">
+                {{round(currentWeather.main.pressure)}} hPa
+              </div>
+            </div>
+          </div>
+
         </ion-card>
 
         <!--list charts-->
@@ -34,7 +46,7 @@
                 Temperatur
                 <small><sup style="font-size:.7em; line-height:2em;">(°C)</sup></small>
                 <ion-icon color="secondary" style="float: right;" name="funnel" item-right
-                (click)="changeRepresentationByTime('Temperatur', temperatures, tempChartLabels)"></ion-icon>
+                          (click)="changeRepresentationByTime('Temperatur', temperatures, tempChartLabels)"></ion-icon>
               </ion-card-title>
               <div style="display: block; width: 100%;">
                 <canvas baseChart #baseChart="base-chart" height="300"

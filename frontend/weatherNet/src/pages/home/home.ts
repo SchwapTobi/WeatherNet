@@ -21,6 +21,8 @@ export class HomePage {
 
   cityColor = '#f5f5f5';
   currentTemperature: number;
+  currentWeather: string;
+
   forecast: any;
 
   forecastActivated: boolean;
@@ -41,21 +43,24 @@ export class HomePage {
     this.forecastActivated = false;
     this.loadWeatherStations();
 
-    let city = this.primaryLocation.name;
-    let key1 = "currentWeatherIn" + city;
+    let key1 = "currentWeatherIn" + this.primaryLocation.name + this.primaryLocation.zipCode;
     let color;
     let currentTemp;
+    let currentWeather;
 
     let data = this.storage.get(key1).then(data => {
       currentTemp = data.main.temp_max;
+      currentWeather = data.weather[0].description;
       color = WeatherUTIL.getColorFromTemp(currentTemp);
 
     }).then(value => {
       this.cityColor = color;
       this.currentTemperature = currentTemp.toString().split(".")[0];
+      this.currentWeather = currentWeather;
+      console.log(this.currentWeather)
     });
 
-    let key2 = "forecastWeatherIn" + city;
+    let key2 = "forecastWeatherIn" + this.primaryLocation.name + this.primaryLocation.zipCode;
     let forecast = [];
     let forecastLoader = this.storage.get(key2).then(data => {
       forecast.push(data);
@@ -70,8 +75,8 @@ export class HomePage {
 
   }
 
-  round(num: any): number {
-    return Math.round(num * 10) / 10;
+  round(num: any): string {
+    return (Math.round(num * 10) / 10).toFixed(1);
   }
 
   loadForeCast() {
@@ -86,37 +91,7 @@ export class HomePage {
 
   //return matching background video
   getVideoTheme(weatherAttribute: String): String {
-    var url = "assets/video/sun_cloudy.mp4";
-    switch (weatherAttribute) {
-      case "clear sky":
-        url = "assets/video/sun.mp4";
-        break;
-      case "few clouds":
-        url = "assets/video/sun_cloudy.mp4";
-        break;
-      case "scattered clouds":
-        url = "assets/video/clouds.mp4";
-        break;
-      case "broken clouds":
-        url = "assets/video/clouds_2.mp4";
-        break;
-      case "shower rain":
-        url = "assets/video/rain_heavy.mp4";
-        break;
-      case "rain":
-        url = "assets/video/rain.mp4";
-        break;
-      case "thunderstorm":
-        url = "assets/video/lightning.mp4";
-        break;
-      case "snow":
-        url = "assets/video/snow.mp4";
-        break;
-      case "mist":
-        url = "assets/video/fog.mp4";
-        break;
-    }
-    return url;
+    return WeatherUTIL.getVideoTheme(weatherAttribute)
   }
 
   showCityDetails(city: NetLocation) {
@@ -125,40 +100,12 @@ export class HomePage {
     })
   }
 
+  getIconColorForWeather(weatherAttribute: String): String {
+    return WeatherUTIL.getIconColorForWeather(weatherAttribute);
+  }
 
   getIconForWeather(weatherAttribute: String): String {
-    var name = "sunny";
-    switch (weatherAttribute) {
-      case "clear sky":
-        name = "sunny";
-        break;
-      case "few clouds":
-        name = "partly-sunny";
-        break;
-      case "scattered clouds":
-        name = "cloudy";
-        break;
-      case "broken clouds":
-        name = "cloudy";
-        break;
-      case "shower rain":
-        name = "rainy";
-        break;
-      case "rain":
-        name = "rainy";
-        break;
-      case "thunderstorm":
-        name = "flash";
-        break;
-      case "snow":
-        name = "snow";
-        break;
-      case "mist":
-        name = "cloudy";
-        break;
-    }
-    return name;
-
+    return WeatherUTIL.getIconForWeather(weatherAttribute);
   }
 
   getColor(temp: any): string {
