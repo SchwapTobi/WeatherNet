@@ -1,5 +1,5 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {AlertController, NavController} from 'ionic-angular';
 import {NetLocation} from "../../model/position/location";
 import {Storage} from "@ionic/storage";
 import {NodeDetailsPage} from "../node-details/node-details";
@@ -25,7 +25,7 @@ export class MapPage {
   CURRENT_LONGITUDE: number;
   MAP_RADIUS: number;
 
-  constructor(public navCtrl: NavController, private storage: Storage) {
+  constructor(public navCtrl: NavController, private storage: Storage, private alertCtrl: AlertController) {
     //define current position to LINZ for testing:
     //TODO: get pos from device
 
@@ -37,6 +37,12 @@ export class MapPage {
   }
 
   ionViewDidLoad() {
+    const alert = this.alertCtrl.create({
+      title: 'Info!',
+      subTitle: 'Da es sich noch um einen Prototyp handelt, sind die Daten der Wetterstationen (blaue Kreise) zufallsgeneriert. Auch die Standorte sind simuliert! \n Die allgemeinen Wetterdaten entsprechen jedoch Echtzeitdaten.',
+      buttons: ['OK']
+    });
+    alert.present();
     this.loadMap();
   }
 
@@ -238,7 +244,7 @@ export class MapPage {
     this.storage.get('weatherNodes').then((val) => {
       weatherNode = val;
 
-      console.log(weatherNode);
+      // console.log(weatherNode);
 
       for (let node of weatherNode) {
         // console.log(node);
@@ -305,7 +311,7 @@ export class MapPage {
     for (let city of capitals) {
       let key = "currentWeatherIn" + city.name+city.zipCode;
       let data = this.storage.get(key).then(data => {
-        console.log(data);
+        // console.log(data);
         let maxTemp: string = WeatherUTIL.getColorFromTemp(data.main.temp_max);
 
         // let maxTemp:string = "#ffa500";

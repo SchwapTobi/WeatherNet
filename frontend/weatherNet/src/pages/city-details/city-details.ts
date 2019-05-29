@@ -57,14 +57,14 @@ export class CityDetailsPage {
       forecast.push(data);
     }).then(value => {
       this.currentWeather = forecast[0][0];
-      console.log(this.currentWeather)
+      // console.log(this.currentWeather)
       this.curretWeatherLoaded();
     });
   }
 
   curretWeatherLoaded() {
     this.forecastActivated = true;
-    console.log(this.forecast)
+    // console.log(this.forecast)
   }
 
 
@@ -77,6 +77,7 @@ export class CityDetailsPage {
   }
 
   getColorForWeather(weatherAttribute: String): String {
+    // console.log(weatherAttribute);
     return WeatherUTIL.getIconColorForWeather(weatherAttribute);
   }
 
@@ -87,7 +88,7 @@ export class CityDetailsPage {
 
   ionViewDidLoad() {
     this.loadMap();
-    console.log("opened city details page")
+    // console.log("opened city details page")
     this.getLogs();
   }
 
@@ -198,7 +199,7 @@ export class CityDetailsPage {
 
   //get forecast from localStorage
   getLogs() {
-    console.log("opened getLogs")
+    // console.log("opened getLogs")
     let data = this.storage.get(this.storageKey).then(data => {
       this.forecast = data;
       this.processForecast();
@@ -485,7 +486,7 @@ export class CityDetailsPage {
               }
             }
           }
-          console.log(newLineChartLabels)
+          // console.log(newLineChartLabels)
           this.saveChangedRepresentation(desc, newData, newLineChartLabels);
 
         } else {
@@ -499,7 +500,7 @@ export class CityDetailsPage {
 
   //update the corresponding data set
   saveChangedRepresentation(desc: string, newData: any, newLineChartLabels: any) {
-    console.log(newData);
+    // console.log(newData);
     if (desc.toLocaleLowerCase() == "luftdruck") {
       this.pressures = newData;
       this.pressureChartLabels = newLineChartLabels;

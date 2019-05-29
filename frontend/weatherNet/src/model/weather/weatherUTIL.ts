@@ -67,6 +67,9 @@ export class WeatherUTIL {
       case "rain":
         name = "rainy";
         break;
+      case "light rain":
+        name = "rainy";
+        break;
       case "thunderstorm":
         name = "flash";
         break;
@@ -105,6 +108,9 @@ export class WeatherUTIL {
       case "rain":
         color = "#616161";
         break;
+      case "light rain":
+        color = "#616161";
+        break;
       case "thunderstorm":
         color = "#616161";
         break;
@@ -141,6 +147,9 @@ export class WeatherUTIL {
         url = "assets/video/rain_heavy.mp4";
         break;
       case "rain":
+        url = "assets/video/rain.mp4";
+        break;
+      case "light rain":
         url = "assets/video/rain.mp4";
         break;
       case "thunderstorm":

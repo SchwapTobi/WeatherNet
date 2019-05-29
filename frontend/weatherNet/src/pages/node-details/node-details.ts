@@ -55,7 +55,7 @@ export class NodeDetailsPage {
     this.weatherNode = this.navParams.get('node');
     this.nodeID = this.weatherNode.nodeID;
     this.getLogs();
-    console.log(this.weatherNode.position);
+    // console.log(this.weatherNode.position);
     this.finishedLoading = true;
   }
 
@@ -464,7 +464,7 @@ export class NodeDetailsPage {
               newLineChartLabels.push(temp);
             }
           }
-          console.log(newLineChartLabels)
+          // console.log(newLineChartLabels)
           this.saveChangedRepresentation(desc, newData, newLineChartLabels);
 
         } else {
@@ -478,7 +478,7 @@ export class NodeDetailsPage {
 
   //update the corresponding data set
   saveChangedRepresentation(desc: string, newData: any, newLineChartLabels: any) {
-    console.log(newData);
+    // console.log(newData);
     if (desc.toLocaleLowerCase() == "luftdruck") {
       this.pressures = newData;
       this.pressureChartLabels = newLineChartLabels;

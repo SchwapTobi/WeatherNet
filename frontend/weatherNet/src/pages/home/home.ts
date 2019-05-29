@@ -57,7 +57,7 @@ export class HomePage {
       this.cityColor = color;
       this.currentTemperature = currentTemp.toString().split(".")[0];
       this.currentWeather = currentWeather;
-      console.log(this.currentWeather)
+      // console.log(this.currentWeather)
     });
 
     let key2 = "forecastWeatherIn" + this.primaryLocation.name + this.primaryLocation.zipCode;
@@ -81,7 +81,7 @@ export class HomePage {
 
   loadForeCast() {
     this.forecastActivated = true;
-    console.log(this.forecast)
+    // console.log(this.forecast)
   }
 
   //show App-infos
@@ -91,6 +91,7 @@ export class HomePage {
 
   //return matching background video
   getVideoTheme(weatherAttribute: String): String {
+    // console.log(weatherAttribute);
     return WeatherUTIL.getVideoTheme(weatherAttribute)
   }
 
