@@ -49,7 +49,7 @@ export class CityDetailsPage {
     this.forecastActivated = false;
     this.city = this.navParams.get('city');
 
-    this.storageKey = "forecastWeatherIn" + this.city.name+this.city.zipCode;
+    this.storageKey = "forecastWeatherIn" + this.city.name + this.city.zipCode;
 
 
     let forecast = [];
@@ -58,8 +58,21 @@ export class CityDetailsPage {
     }).then(value => {
       this.currentWeather = forecast[0][0];
       // console.log(this.currentWeather)
-      this.curretWeatherLoaded();
+      if (this.currentWeather) {
+        this.curretWeatherLoaded();
+      } else {
+        let forecastLoader = this.storage.get(this.storageKey).then(data => {
+          forecast.push(data);
+        }).then(value => {
+          this.currentWeather = forecast[0][0];
+          // console.log(this.currentWeather)
+          if (this.currentWeather) {
+            this.curretWeatherLoaded();
+          }
+        });
+      }
     });
+
   }
 
   curretWeatherLoaded() {

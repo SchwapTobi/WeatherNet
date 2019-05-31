@@ -43,7 +43,7 @@ export class ListPage {
   }
 
   filterCityList(filtering: string) {
-    for (var x in this.json) {
+    for (let x in this.json) {
       if (filtering && this.json[x].name && this.json[x].name.toLowerCase().startsWith(filtering.toLowerCase())) {
         this.results.push(this.json[x]);
       }
@@ -51,7 +51,7 @@ export class ListPage {
   }
 
   filterZipList(filtering: Number) {
-    for (var x in this.json) {
+    for (let x in this.json) {
       if (this.json[x].name.toLowerCase().startsWith(filtering)) {
         this.results.push(this.json[x]);
       }
@@ -60,11 +60,11 @@ export class ListPage {
 
   makeResult() {
     if (this.isANum) {
-      for (var x in this.results) {
+      for (let x in this.results) {
         this.resultShow.push(this.results[x].zipCode + ", " + this.results[x].name);
       }
     } else {
-      for (var x in this.results) {
+      for (let x in this.results) {
         this.resultShow.push(this.results[x].name + ", " + this.results[x].zipCode);
       }
     }
